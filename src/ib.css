@@ -1,0 +1,22 @@
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ib-nav-logo {
+    width: 120px;
+}
+
+
+.ib-section-header {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4A8CE1;
+    padding-left: 16px;
+}
+
+.ib-no-border {
+    border: none;
+}
+

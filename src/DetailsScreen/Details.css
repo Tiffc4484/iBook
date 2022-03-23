@@ -1,0 +1,32 @@
+.ib-details-title {
+    font-size: 36px;
+}
+
+.ib-details-author {
+    font-size: 20px;
+}
+
+.ib-details-price {
+    font-size: 30px;
+}
+
+.ib-details-button {
+    font-size: 20px;
+    background-color: #BDD7F9;
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 18px;
+}
+
+.ib-details-content {
+    font-size: 20px;
+    padding-left: 16px;
+}
+
+.ib-details-card {
+    background-color: #BDD7F9;
+    border-radius: 18px;
+    color: black;
+
+}
