@@ -18,10 +18,12 @@ const Navigation = () => {
                         <span className="ms-4">About Us</span>
                         <span className="ms-4">Browse</span>
                         <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
-                        <button
-                            className="ms-4 btn btn-primary ib-nav-button">
-                            Login or Create Account
-                        </button>
+                        <Link to="/login">
+                            <button
+                                className="ms-4 btn btn-primary ib-nav-button" >
+                                Login or Create Account
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
