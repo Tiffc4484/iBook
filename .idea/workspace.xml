@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -38,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -59,7 +60,7 @@
       <updated>1648030127980</updated>
       <workItem from="1648030131122" duration="23000" />
       <workItem from="1648030210519" duration="5000" />
-      <workItem from="1648175605145" duration="6009000" />
+      <workItem from="1648175605145" duration="10077000" />
     </task>
     <servers />
   </component>
