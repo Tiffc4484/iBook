@@ -30,7 +30,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c5b4bf1e-8310-4c30-8346-e88d226189cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ShoppingCart/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ShoppingCart/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ShoppingCart/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ShoppingCart/CartScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +50,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ShoppingCart" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -70,7 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/@mui/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -83,12 +92,6 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/node_modules/@mui/utils" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,37 +104,16 @@
       <workItem from="1648030131122" duration="23000" />
       <workItem from="1648030210519" duration="5000" />
       <workItem from="1648175605145" duration="13179000" />
-      <workItem from="1648436017651" duration="3825000" />
+      <workItem from="1648319558736" duration="346000" />
     </task>
-    <task id="LOCAL-00001" summary="Direct to cart page from nav bar">
-      <created>1648320170057</created>
+    <task id="LOCAL-00001" summary="Add shopping cart screen and link to homepage">
+      <created>1648278083278</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1648320170057</updated>
+      <updated>1648278083278</updated>
     </task>
-    <task id="LOCAL-00002" summary="Update Cart page UI">
-      <created>1648326356677</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1648326356677</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Update Cart page UI with dummy image, title, price and summary col">
-      <created>1648357377091</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1648357377091</updated>
-    </task>
-    <task id="LOCAL-00004" summary="1. Import material UI icon package;&#10;2. Add footer component&#10;3. update add and remove icon to cart page">
-      <created>1648361164285</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1648361164286</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,40 +144,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Direct to cart page from nav bar" />
-    <MESSAGE value="Update Cart page UI" />
-    <MESSAGE value="Update Cart page UI with dummy image, title, price and summary col" />
-    <MESSAGE value="1. Import material UI icon package;&#10;2. Add footer component&#10;3. update add and remove icon to cart page" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Import material UI icon package;&#10;2. Add footer component&#10;3. update add and remove icon to cart page" />
+    <MESSAGE value="Add shopping cart screen and link to homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add shopping cart screen and link to homepage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1171" y="641" key="#ESLint" timestamp="1648276553816">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
     <state x="-1171" y="641" key="#ESLint/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276553816" />
-    <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog" timestamp="1648326613236">
-      <screen x="-1920" y="293" width="1920" height="1055" />
+    <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog" timestamp="1648277974590">
+      <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1648320723151" />
-    <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog/0.38.1512.888/-1920.293.1920.1055@-1920.293.1920.1055" timestamp="1648326613236" />
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.38.1512.888/-1920.293.1920.1055@0.38.1512.888" timestamp="1648321051447" />
     <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648277974590" />
-    <state width="960" height="192" key="GridCell.Tab.0.bottom" timestamp="1648363990999">
+    <state width="1846" height="192" key="GridCell.Tab.0.bottom" timestamp="1648278494538">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="960" height="192" key="GridCell.Tab.0.bottom/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648363990999" />
-    <state width="960" height="192" key="GridCell.Tab.0.center" timestamp="1648363990998">
+    <state width="1846" height="192" key="GridCell.Tab.0.bottom/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648278494538" />
+    <state width="1846" height="192" key="GridCell.Tab.0.center" timestamp="1648278494537">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="960" height="192" key="GridCell.Tab.0.center/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648363990998" />
-    <state width="960" height="192" key="GridCell.Tab.0.left" timestamp="1648363990997">
+    <state width="1846" height="192" key="GridCell.Tab.0.center/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648278494537" />
+    <state width="1846" height="192" key="GridCell.Tab.0.left" timestamp="1648278494537">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="960" height="192" key="GridCell.Tab.0.left/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648363990997" />
-    <state width="960" height="192" key="GridCell.Tab.0.right" timestamp="1648363990999">
+    <state width="1846" height="192" key="GridCell.Tab.0.left/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648278494537" />
+    <state width="1846" height="192" key="GridCell.Tab.0.right" timestamp="1648278494537">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="960" height="192" key="GridCell.Tab.0.right/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648363990999" />
+    <state width="1846" height="192" key="GridCell.Tab.0.right/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648278494537" />
     <state x="-1233" y="306" key="RollbackChangesDialog" timestamp="1648277955576">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
@@ -204,9 +180,9 @@
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
     <state x="-1802" y="268" key="SettingsEditor/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276472119" />
-    <state x="-1103" y="268" width="1173" height="1972" key="search.everywhere.popup" timestamp="1648360191125">
+    <state x="-1660" y="358" key="Vcs.Push.Dialog.v2" timestamp="1648278269467">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state x="-1103" y="268" width="1173" height="1972" key="search.everywhere.popup/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648360191125" />
+    <state x="-1660" y="358" key="Vcs.Push.Dialog.v2/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648278269467" />
   </component>
 </project>
