@@ -1,8 +1,12 @@
 import React, {useState} from "react";
+import Navigation from "../Navigation";
 
 const CartScreen = () => {
     return (
-        <h1>Shopping cart</h1>
+        <div>
+            <Navigation/>
+            <h1>Shopping cart</h1>
+        </div>
     )
 }
 
