@@ -33,9 +33,27 @@
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/Portal.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/Portal.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/Portal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/Portal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/TabPanel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/TabPanel.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/cjs/TabPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/Portal.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/Portal.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/Portal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/Portal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/TabPanel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/TabPanel.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/esm/TabPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@restart/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/cjs/DropdownMenu.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/cjs/DropdownMenu.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/cjs/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/cjs/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/dist/react-bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/dist/react-bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/dist/react-bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/dist/react-bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/esm/DropdownMenu.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/esm/DropdownMenu.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/esm/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/esm/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/react-bootstrap/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/ShoppingCart/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ShoppingCart/CartScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +105,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648320170057</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update Cart page UI">
+      <created>1648326356677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648326356677</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,35 +165,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Direct to cart page from nav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Direct to cart page from nav bar" />
+    <MESSAGE value="Update Cart page UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Cart page UI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1171" y="641" key="#ESLint" timestamp="1648276553816">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
     <state x="-1171" y="641" key="#ESLint/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276553816" />
-    <state x="100" y="100" width="1720" height="880" key="DiffContextDialog" timestamp="1648321051447">
-      <screen x="0" y="38" width="1512" height="888" />
+    <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog" timestamp="1648326613236">
+      <screen x="-1920" y="293" width="1920" height="1055" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1648320723151" />
+    <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog/0.38.1512.888/-1920.293.1920.1055@-1920.293.1920.1055" timestamp="1648326613236" />
     <state x="100" y="100" width="1720" height="880" key="DiffContextDialog/0.38.1512.888/-1920.293.1920.1055@0.38.1512.888" timestamp="1648321051447" />
     <state x="-1820" y="368" width="1720" height="880" key="DiffContextDialog/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648277974590" />
-    <state width="1846" height="192" key="GridCell.Tab.0.bottom" timestamp="1648276290878">
+    <state width="960" height="192" key="GridCell.Tab.0.bottom" timestamp="1648357238888">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="1846" height="192" key="GridCell.Tab.0.bottom/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276290878" />
-    <state width="1846" height="192" key="GridCell.Tab.0.center" timestamp="1648276290877">
+    <state width="960" height="192" key="GridCell.Tab.0.bottom/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648357238888" />
+    <state width="960" height="192" key="GridCell.Tab.0.center" timestamp="1648357238886">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="1846" height="192" key="GridCell.Tab.0.center/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276290877" />
-    <state width="1846" height="192" key="GridCell.Tab.0.left" timestamp="1648276290875">
+    <state width="960" height="192" key="GridCell.Tab.0.center/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648357238886" />
+    <state width="960" height="192" key="GridCell.Tab.0.left" timestamp="1648357238886">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="1846" height="192" key="GridCell.Tab.0.left/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276290875" />
-    <state width="1846" height="192" key="GridCell.Tab.0.right" timestamp="1648276290878">
+    <state width="960" height="192" key="GridCell.Tab.0.left/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648357238886" />
+    <state width="960" height="192" key="GridCell.Tab.0.right" timestamp="1648357238887">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
-    <state width="1846" height="192" key="GridCell.Tab.0.right/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648276290878" />
+    <state width="960" height="192" key="GridCell.Tab.0.right/0.38.1512.944/-1920.268.1920.1080@-1920.268.1920.1080" timestamp="1648357238887" />
     <state x="-1233" y="306" key="RollbackChangesDialog" timestamp="1648277955576">
       <screen x="-1920" y="268" width="1920" height="1080" />
     </state>
