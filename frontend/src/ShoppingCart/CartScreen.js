@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import Navigation from "../Navigation";
 import styled from "styled-components";
-
+import {Add, Remove,} from "@material-ui/icons";
 import items from "../DummyData/dummyBooks.json";
+import Footer from "./Footer";
 
 const Wrapper = styled.div` 
  padding: 20px;
@@ -115,9 +116,9 @@ const CartScreen = () => {
                             </ProductDetail>
                             <PriceDetail>
                                 <ProductAmountContainer>
-                                    {/*<Add/>*/}
+                                    <Add/>
                                     <ProductAmount>2</ProductAmount>
-                                    {/*<Remove/>*/}
+                                    <Remove/>
                                 </ProductAmountContainer>
                                 <ProductPrice>$ {items[0].saleInfo.listPrice.amount}</ProductPrice>
                             </PriceDetail>
@@ -128,6 +129,7 @@ const CartScreen = () => {
                     </Summary>
                 </Bottom>
             </Wrapper>
+            <Footer/>
         </div>
     )
 }
