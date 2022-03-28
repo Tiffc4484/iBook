@@ -1,5 +1,21 @@
 
-.ib-card-item {
+.ib-card-image-container {
     max-width: 220px;
     min-width: 220px;
+    max-height: 300px;
+    min-height: 300px;
 }
+
+
+.ib-card-image {
+    max-width: 220px;
+    min-width: 220px;
+    max-height: 300px;
+    min-height: 300px;
+}
+
+
+
+
+
+

@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b4bf1e-8310-4c30-8346-e88d226189cc" name="Changes" comment="" />
+    <list default="true" id="c5b4bf1e-8310-4c30-8346-e88d226189cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/no-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Service/BooksService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/BookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/BookItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/Details.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/Details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/DetailsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/DetailsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/Rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/Rating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/ResultItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/ResultItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ib.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ib.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +76,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public/images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,10 +92,22 @@
       <workItem from="1648030131122" duration="23000" />
       <workItem from="1648030210519" duration="5000" />
       <workItem from="1648175605145" duration="13179000" />
+      <workItem from="1648444319898" duration="24878000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
