@@ -16,17 +16,11 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
-<<<<<<< HEAD
     "pug": "^3.0.2",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.11.2",
-=======
-    "pug": "^3.0.2"
-  },
-  "devDependencies": {
->>>>>>> 6a8eb1371894559d892a6add40d0a10c3e88d4a5
     "eslint": "^8.12.0"
   }
 }
