@@ -40,7 +40,7 @@ export default function SignUpScreen() {
         setPassword("");
         setPasswordConfirm("");
         const hash = await password.hashCode();
-        fetch("/signup", {
+        fetch("/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default function SignUpScreen() {
             <button className="mb-3 btn btn-custom text-center">Submit</button>
 
             <div className="mb-2 d-flex justify-content-end">
-                <Link className="text-end d-block" to="/login">
+                <Link className="text-end d-block" to="/auth/login">
                     Log in
                 </Link>
             </div>

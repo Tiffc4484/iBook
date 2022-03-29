@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const { getCollection } = require("../src/mongo");
-const { ObjectId } = require("mongodb").ObjectID;
+const { ObjectId } = require("mongodb").ObjectId;
 
 const bcrypt = require("bcrypt");
 
@@ -17,7 +17,7 @@ router.post("/login", async (req, res) => {
         } else {
             query = { username: req.body.username };
         }
-        const collection = await getCollection("Users");
+        const collection = await getCollection("users");
         const resFind = await collection.find(query).toArray();
         if (resFind.length === 0) {
             return res.sendStatus(404);
@@ -50,7 +50,8 @@ router.post("/signup", async (req, res) => {
         return res.sendStatus(400);
     }
     try {
-        const collection = await getCollection("Users");
+        const collection = await getCollection("users");
+        console.log(collection);
         const resFind = await collection
             .find({
                 email: req.body.email,
@@ -68,7 +69,7 @@ router.post("/signup", async (req, res) => {
             },
         };
         console.log(data);
-        await getCollection("Users").insertOne(data);
+        await getCollection("users").insertOne(data);
         res.sendStatus(201);
     } catch (err) {
         console.log(err);
