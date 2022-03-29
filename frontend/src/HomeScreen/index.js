@@ -5,6 +5,7 @@ import Discover from "./Discover";
 import "./HomeScreen.css";
 import TopRated from "./TopRated";
 import {findTopBooks} from "../Service/BooksService";
+import Footer from "../ShoppingCart/Footer";
 
 const HomeScreen = () => {
     const [topBooks, setTopBooks] = useState([]);
@@ -21,6 +22,7 @@ const HomeScreen = () => {
             <HomeHeader/>
             <Discover books={topBooks}/>
             <TopRated books={topBooks}/>
+            <Footer/>
         </>
     )
 }
