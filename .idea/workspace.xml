@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="354e3ac7-0316-469e-9d69-6287e2f8cf80" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
+    <list default="true" id="d369ab63-efc7-4846-abfb-4b8647bc67d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/0.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/no-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Service/BooksService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/BookItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/BookItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/Details.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/Details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/DetailsItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/DetailsItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/Rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/Rating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/DetailsScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailsScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/ResultItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/ResultItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/Results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ResultsScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ResultsScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ib.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ib.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +57,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="272FBSBHkFgxXMQnadnxY2oEOjy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,5 +83,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
