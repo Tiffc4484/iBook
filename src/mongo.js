@@ -1,27 +1,29 @@
+const { MongoClient } = require("mongodb");
+const url = process.env.MONGO_URL;
+//const url = "mongodb+srv://tiffanychen:A1fal4khAfBLpk7J@ibook.qkr0m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const fs = require('fs');
+let client, db;
 
-const credentials = '<path_to_certificate>'
-
-const client = new MongoClient('mongodb+srv://ibook.qkr0m.mongodb.net/myFirstDatabase?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority', {
-    sslKey: credentials,
-    sslCert: credentials,
-    serverApi: ServerApiVersion.v1
-});
-
-async function run() {
+async function connect() {
     try {
+        client = new MongoClient(url, { useUnifiedTopology: true });
+        console.log("Connecting to the database.");
         await client.connect();
-        const database = client.db("testDB");
-        const collection = database.collection("testCol");
-        const docCount = await collection.countDocuments({});
-        console.log(docCount);
-        // perform actions using client
-    } finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
+        console.log("Connected.");
+        db = client.db("iBook_database");
+    } catch (e) {
+        client.close().catch(console.log);
+        console.log("Error ", e);
+        throw e;
     }
 }
 
-run().catch(console.dir);
+function getCollection(collectionName) {
+    return db.collection(collectionName);
+}
+
+module.exports = {
+    connect,
+    getCollection,
+};
+
