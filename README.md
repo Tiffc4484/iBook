@@ -9,12 +9,13 @@ In the project directory, you can run:
 For development, you need to start two servers
 
 Run the backend in the root directory\
-`npm start`
+`npm install``npm start`
 
 The backend will run on [http://localhost:3001](http://localhost:3001)
 
 Then, run the frontend in the frontend directory\
 `cd frontend`
+`npm install`
 `npm start`
 
 
