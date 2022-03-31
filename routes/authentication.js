@@ -12,11 +12,9 @@ router.post("/login", async (req, res) => {
     }
     try {
         let query;
-        if (req.body.username.indexOf("@") > 0) {
-            query = { email: req.body.username };
-        } else {
-            query = { username: req.body.username };
-        }
+
+        query = { username: req.body.username };
+
         const collection = await getCollection("users");
         const resFind = await collection.find(query).toArray();
         if (resFind.length === 0) {
@@ -54,7 +52,7 @@ router.post("/signup", async (req, res) => {
         console.log(collection);
         const resFind = await collection
             .find({
-                email: req.body.email,
+                username: req.body.email,
             })
             .toArray();
         if (resFind.length !== 0) {
@@ -62,10 +60,9 @@ router.post("/signup", async (req, res) => {
         }
         const hash = await bcrypt.hash(req.body.password, 10);
         const data = {
-            email: req.body.email,
             username: req.body.email,
             password: hash,
-            booksInCart: {
+            cart: {
             },
         };
         console.log(data);
