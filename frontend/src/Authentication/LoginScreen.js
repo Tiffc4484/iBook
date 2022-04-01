@@ -20,8 +20,10 @@ const LoginScreen = (props) => {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setUsername("");
-        setPassword("");
+        setUsername(username);
+        setPassword(password);
+        console.log("username: " + username);
+        console.log("password: " + password);
         const hash = await password.hashCode();
         const checked = document.querySelector(".form-check-input").checked;
         const data = {

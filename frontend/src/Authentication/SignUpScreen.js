@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InputBox from "./InputBox.js";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./Auth.css";
 
 export default function SignUpScreen() {
@@ -8,7 +8,7 @@ export default function SignUpScreen() {
     const [password, setPassword] = useState("");
     const [password_confirm, setPasswordConfirm] = useState("");
     const [toggle_visibility, setToggleVisibility] = useState("password");
-    //const history = useHistory();
+    const navigate = useNavigate();
 
     function handleEmail(evt) {
         setUsername(evt.target.value);
@@ -36,9 +36,9 @@ export default function SignUpScreen() {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setUsername(username);
-        setPassword(password);
-        setPasswordConfirm(password_confirm);
+        setUsername("");
+        setPassword("");
+        setPasswordConfirm("");
         const hash = await password.hashCode();
         console.log("username: " + username);
         console.log("password: " + password);
@@ -49,7 +49,7 @@ export default function SignUpScreen() {
             },
             body: JSON.stringify({
                 username: username,
-                password: password,
+                password: hash,
             }),
         })
             .then((resRaw) => {
@@ -59,8 +59,7 @@ export default function SignUpScreen() {
                     });
                 } else {
                     alert("Sign up succeed");
-                    window.location = "/auth/login";
-                    //history.push("/auth/login");
+                    navigate.push("/auth/login");
                 }
             })
             .catch((err) => {

@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 const { getCollection } = require("../src/mongo");
-//const routeUtils = require("../src/routeUtils");
+const routeUtils = require("../src/routeUtils");
 
 const { ObjectId } = require("mongodb").ObjectId;
 
 const bcrypt = require("bcrypt");
+//router.use("/", routeUtils.checkLogStatus);
 
 router.post("/login", async (req, res) => {
     if (req.body.username === undefined || req.body.password === undefined) {
@@ -14,10 +15,10 @@ router.post("/login", async (req, res) => {
     }
     try {
         let query;
-
         query = {username: req.body.username };
         const collection = await getCollection("users");
         const resFind = await collection.find(query).toArray();
+        console.log(resFind);
         if (resFind.length === 0) {
             return res.sendStatus(404);
         }
@@ -45,8 +46,8 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/signup", async (req, res) => {
-    // console.log(req.body.username);
-    // console.log(req.body.password);
+    console.log(req.body.username);
+    console.log(req.body.password);
     console.log(req.body);
     if (req.body.username === undefined || req.body.password === undefined) {
         return res.sendStatus(400);
@@ -77,14 +78,14 @@ router.post("/signup", async (req, res) => {
     }
 });
 
-router.get("/get-user", async (req, res) => {
+router.get("/user", async (req, res) => {
     if (req.session.user === undefined) {
         // once the browser has the cookie, the log status stays valid
         if (req.cookies._id === undefined) {
             return res.sendStatus(204);
         }
         try {
-            const collection = await getCollection("Users");
+            const collection = await getCollection("users");
             const user = await collection.findOne(
                 { _id: ObjectId(req.cookies._id) },
                 { projection: { _id: 0, password: 0 } }
