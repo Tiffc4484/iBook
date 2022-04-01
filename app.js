@@ -13,13 +13,22 @@ const authRouter = require('./routes/authentication');
 
 const app = express();
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/auth',authRouter);
-
+// 下面三行必须在最开始，放在后边fetch会报错，不知道为什么
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
+
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);//获取请求源 这样所有请求就都有访问权限了
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length, Authorization, Accept,X-Requested-With')
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+  next()
+});
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 
 
 // view engine setup
@@ -42,7 +51,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
@@ -50,16 +59,9 @@ app.use(function(req, res, next) {
 //   res.sendFile(path.join(__dirname, "frontend/public/index.html"));
 // });
 
-app.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', req.headers.origin);
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length, Authorization, Accept,X-Requested-With')
-  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
-  next()
-});
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -68,6 +70,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 module.exports = app;

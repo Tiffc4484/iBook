@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InputBox from "./InputBox.js";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Auth.css";
 
 export default function SignUpScreen() {
@@ -40,14 +40,16 @@ export default function SignUpScreen() {
         setPassword(password);
         setPasswordConfirm(password_confirm);
         const hash = await password.hashCode();
-        fetch("http://127.0.0.1:3000/auth/signup", {
+        console.log("username: " + username);
+        console.log("password: " + password);
+        fetch("http://127.0.0.1:3001/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
                 username: username,
-                password: hash,
+                password: password,
             }),
         })
             .then((resRaw) => {
@@ -67,7 +69,7 @@ export default function SignUpScreen() {
     }
 
     return (
-        <form className="form" onSubmit = {handleSubmit} noValidate>
+        <form className="form" onSubmit={handleSubmit} noValidate>
             <h1 className="text-center mb-4">Sign Up</h1>
             <InputBox
                 label="Email"

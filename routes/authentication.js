@@ -43,21 +43,16 @@ router.post("/login", async (req, res) => {
     }
 });
 
-
-router.get('/signup', function(req, res, next) {
-    res.render("/auth/signup");
-    res.send('GET localhost3001/auth');
-});
-
 router.post("/signup", async (req, res) => {
-    console.log(req.body.username);
-    console.log(req.body.password);
+    // console.log(req.body.username);
+    // console.log(req.body.password);
+    console.log(req.body);
     if (req.body.username === undefined || req.body.password === undefined) {
         return res.sendStatus(400);
     }
     try {
         const collection = await getCollection("users");
-        console.log(collection);
+        // console.log(collection);
         const resFind = await collection
             .find({
                 username: req.body.username,
