@@ -36,6 +36,8 @@ app.use(session({
   saveUninitialized: false, // don't create session until something stored
   secret: 'shhhh, very secret'
 }));
+
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'frontend')));
 
@@ -44,6 +46,17 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend/public/index.html"));
+// });
+
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Credentials', true);
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length, Authorization, Accept,X-Requested-With')
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+  next()
+});
 
 // error handler
 app.use(function(err, req, res, next) {

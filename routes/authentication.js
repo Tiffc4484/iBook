@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
                 return res.sendStatus(200);
             }
         }
-        res.status(404).send("Username and password do not match");
+        res.status(400).send("Username and password do not match");
     } catch (err) {
         console.log(err);
         res.sendStatus(400);
@@ -45,6 +45,7 @@ router.post("/login", async (req, res) => {
 
 
 router.get('/signup', function(req, res, next) {
+    res.render("/auth/signup");
     res.send('GET localhost3001/auth');
 });
 

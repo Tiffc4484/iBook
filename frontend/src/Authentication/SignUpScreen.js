@@ -36,11 +36,11 @@ export default function SignUpScreen() {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setUsername("");
-        setPassword("");
-        setPasswordConfirm("");
+        setUsername(username);
+        setPassword(password);
+        setPasswordConfirm(password_confirm);
         const hash = await password.hashCode();
-        fetch("signup", {
+        fetch("http://127.0.0.1:3000/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -67,7 +67,7 @@ export default function SignUpScreen() {
     }
 
     return (
-        <form className="form" onSubmit={handleSubmit} noValidate>
+        <form className="form" onSubmit = {handleSubmit} noValidate>
             <h1 className="text-center mb-4">Sign Up</h1>
             <InputBox
                 label="Email"
