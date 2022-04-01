@@ -43,8 +43,15 @@ router.post("/login", async (req, res) => {
     }
 });
 
+
+router.get('/signup', function(req, res, next) {
+    res.send('GET localhost3001/auth');
+});
+
 router.post("/signup", async (req, res) => {
-    if (req.body.email === undefined || req.body.password === undefined) {
+    console.log(req.body.username);
+    console.log(req.body.password);
+    if (req.body.username === undefined || req.body.password === undefined) {
         return res.sendStatus(400);
     }
     try {
@@ -52,7 +59,7 @@ router.post("/signup", async (req, res) => {
         console.log(collection);
         const resFind = await collection
             .find({
-                username: req.body.email,
+                username: req.body.username,
             })
             .toArray();
         if (resFind.length !== 0) {
@@ -60,10 +67,8 @@ router.post("/signup", async (req, res) => {
         }
         const hash = await bcrypt.hash(req.body.password, 10);
         const data = {
-            username: req.body.email,
+            username: req.body.username,
             password: hash,
-            cart: {
-            },
         };
         console.log(data);
         await getCollection("users").insertOne(data);

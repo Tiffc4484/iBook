@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import InputBox from "./InputBox.js";
-import { Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./Auth.css";
 
 export default function SignUpScreen() {
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [password_confirm, setPasswordConfirm] = useState("");
     const [toggle_visibility, setToggleVisibility] = useState("password");
     //const history = useHistory();
 
     function handleEmail(evt) {
-        setEmail(evt.target.value);
+        setUsername(evt.target.value);
     }
 
     function handlePassword(evt) {
@@ -36,17 +36,17 @@ export default function SignUpScreen() {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setEmail("");
+        setUsername("");
         setPassword("");
         setPasswordConfirm("");
         const hash = await password.hashCode();
-        fetch("/auth/signup", {
+        fetch("signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                username: email,
+                username: username,
                 password: hash,
             }),
         })
@@ -57,6 +57,7 @@ export default function SignUpScreen() {
                     });
                 } else {
                     alert("Sign up succeed");
+                    window.location = "/auth/login";
                     //history.push("/auth/login");
                 }
             })
@@ -70,7 +71,7 @@ export default function SignUpScreen() {
             <h1 className="text-center mb-4">Sign Up</h1>
             <InputBox
                 label="Email"
-                value={email}
+                value={username}
                 type="email"
                 onChange={handleEmail}
                 feedback="Please provide a valid email address"
@@ -89,7 +90,7 @@ export default function SignUpScreen() {
                 value={password_confirm}
                 onChange={handlePasswordConfirm}
                 type={toggle_visibility}
-                feedback="Password and confirm password does not match"
+                feedback="Password and confirm password do not match"
                 required={true}
             />
             <div className="mb-3 form-check">
