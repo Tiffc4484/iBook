@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const { getCollection } = require("../src/mongo");
+//const routeUtils = require("../src/routeUtils");
+
 const { ObjectId } = require("mongodb").ObjectId;
 
 const bcrypt = require("bcrypt");
@@ -13,8 +15,7 @@ router.post("/login", async (req, res) => {
     try {
         let query;
 
-        query = { username: req.body.username };
-
+        query = {username: req.body.username };
         const collection = await getCollection("users");
         const resFind = await collection.find(query).toArray();
         if (resFind.length === 0) {
@@ -36,7 +37,7 @@ router.post("/login", async (req, res) => {
                 return res.sendStatus(200);
             }
         }
-        res.status(400).send("Username and password do not match");
+        res.status(400).send("Username and password do not match, please try again");
     } catch (err) {
         console.log(err);
         res.sendStatus(400);
@@ -65,6 +66,7 @@ router.post("/signup", async (req, res) => {
         const data = {
             username: req.body.username,
             password: hash,
+            cart:[],
         };
         console.log(data);
         await getCollection("users").insertOne(data);

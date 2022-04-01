@@ -42,7 +42,7 @@ export default function SignUpScreen() {
         const hash = await password.hashCode();
         console.log("username: " + username);
         console.log("password: " + password);
-        fetch("http://127.0.0.1:3001/auth/signup", {
+        fetch("/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

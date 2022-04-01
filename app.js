@@ -5,18 +5,17 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 require("dotenv").config();
+const app = express();
 
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authentication');
 
-const app = express();
-
-// 下面三行必须在最开始，放在后边fetch会报错，不知道为什么
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
 
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', req.headers.origin);//获取请求源 这样所有请求就都有访问权限了
@@ -26,9 +25,6 @@ app.all('*', function (req, res, next) {
   next()
 });
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/auth', authRouter);
 
 
 // view engine setup
@@ -37,17 +33,22 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: false }));
-
-app.use(session({
-  resave: false, // don't save session if unmodified
-  saveUninitialized: false, // don't create session until something stored
-  secret: 'shhhh, very secret'
-}));
-
-
 app.use(cookieParser());
+app.use(
+    session({
+      secret: "iBook",
+      resave: false,
+      saveUninitialized: true,
+      cookie: { secure: false },
+      expires: new Date(Date.now() + 30 * 86400 * 1000),
+    })
+);
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/auth', authRouter);
+
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 // catch 404 and forward to error handler
@@ -58,7 +59,6 @@ app.use(function (req, res, next) {
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "frontend/public/index.html"));
 // });
-
 
 // error handler
 app.use(function (err, req, res, next) {
