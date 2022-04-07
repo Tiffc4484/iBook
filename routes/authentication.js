@@ -4,10 +4,10 @@ const router = express.Router();
 const { getCollection } = require("../src/mongo");
 const routeUtils = require("../src/routeUtils");
 
-const { ObjectId } = require("mongodb").ObjectId;
+const { ObjectId } = require("mongodb");
 
 const bcrypt = require("bcrypt");
-//router.use("/", routeUtils.checkLogStatus);
+router.use("/", routeUtils.checkLogStatus);
 
 router.post("/login", async (req, res) => {
     if (req.body.username === undefined || req.body.password === undefined) {
@@ -87,7 +87,7 @@ router.get("/user", async (req, res) => {
         try {
             const collection = await getCollection("users");
             const user = await collection.findOne(
-                { _id: ObjectId(req.cookies._id) },
+                { _id: new ObjectId(req.cookies._id) },
                 { projection: { _id: 0, password: 0 } }
             );
             if (user === null) {
