@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import _uniqueId from "lodash/uniqueId";
 
 /**
- * InputBox is a controlled component that represents a input and label.
+ * InputBox is a controlled component that represents an input and label.
  *
  * @param props.label (required) label
  * @param props.value (required) value

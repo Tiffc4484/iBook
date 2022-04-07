@@ -1,12 +1,23 @@
 import './App.css';
 import './ib.css';
 import HomeScreen from "./HomeScreen";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import ResultsScreen from "./ResultsScreen";
 import DetailsScreen from "./DetailsScreen";
 import LoginScreen from "./Authentication/LoginScreen";
 import SignUpScreen from "./Authentication/SignUpScreen";
+import {useEffect, useState} from "react";
+
+function App() {
+  const [user, setUser] = useState();
+  const [flag, refreshPage] = useState(true);
+  useEffect(() => {
+    getUser().then((user) => {
+      setUser(user);
+      console.log(`re-render user: ${user.username}`);
+    });
+  }, [flag]);
+
 import CartScreen from "./ShoppingCart/CartScreen";
 
 function App() {
@@ -23,9 +34,13 @@ function App() {
 
             </Routes>
         </BrowserRouter>
-
-    </div>
+      </div>
   );
 }
-
+async function getUser() {
+  const resRaw = await fetch("/auth/user");
+  if (resRaw.status !== 204) {
+    return await resRaw.json();
+  }
+}
 export default App;

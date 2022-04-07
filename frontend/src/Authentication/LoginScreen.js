@@ -20,8 +20,10 @@ const LoginScreen = (props) => {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setUsername("");
-        setPassword("");
+        setUsername(username);
+        setPassword(password);
+        console.log("username: " + username);
+        console.log("password: " + password);
         const hash = await password.hashCode();
         const checked = document.querySelector(".form-check-input").checked;
         const data = {
@@ -29,7 +31,7 @@ const LoginScreen = (props) => {
             password: hash,
             checked: checked,
         };
-        fetch("/login", {
+        fetch("/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -43,8 +45,7 @@ const LoginScreen = (props) => {
                     });
                 } else {
                     alert("Log in succeed");
-                    //props.refreshPage((prev) => !prev);
-                    // history.push("/overview");
+                    window.location = "/";
                 }
             })
             .catch((err) => {
@@ -79,7 +80,7 @@ const LoginScreen = (props) => {
             </div>
             <button className="mb-3 btn btn-custom text-center">Submit</button>
             <div className="mb-2 d-flex justify-content-end">
-                <Link className="text-end d-block" to="/signUp">
+                <Link className="text-end d-block" to="/auth/signup">
                     Sign up
                 </Link>
             </div>
