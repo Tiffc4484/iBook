@@ -18,16 +18,21 @@ function App() {
     });
   }, [flag]);
 
+import CartScreen from "./ShoppingCart/CartScreen";
+
+function App() {
   return (
-      <div className="container-fluid">
+    <div className="container-fluid">
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomeScreen user={user}/>}></Route>
-            <Route path="/results" element={<ResultsScreen/>}></Route>
-            <Route path="/details" element={<DetailsScreen/>}></Route>
-            <Route path="/auth/login" element={<LoginScreen/>}></Route>
-            <Route path="/auth/signup" element={<SignUpScreen/>}></Route>
-          </Routes>
+            <Routes>
+                <Route path="/" element={<HomeScreen/>}></Route>
+                <Route path="/results/:keyword" element={<ResultsScreen/>}></Route>
+                <Route path="/details/:id" element={<DetailsScreen/>}></Route>
+                <Route exact path="/login" element={<LoginScreen/>}></Route>
+                <Route exact path="/signup" element={<SignUpScreen/>}></Route>
+                <Route exact path="/shopping_cart" element={<CartScreen/>}></Route>
+
+            </Routes>
         </BrowserRouter>
       </div>
   );
