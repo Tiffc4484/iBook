@@ -1,4 +1,14 @@
 # dependencies
-/node_modules
+node_modules/
 
 .env
+
+
+# misc
+.DS_Store
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Gatsby files
+.cache/
