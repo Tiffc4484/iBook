@@ -1,4 +1,18 @@
 # dependencies
-/node_modules
+node_modules/
 
+# mongo URL
 .env
+
+
+# Optional npm cache directory
+.npm
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Gatsby files
+.cache/
