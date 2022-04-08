@@ -4,12 +4,12 @@ import './Discover.css';
 import BookCarousel from "../../BookCarousel";
 
 
-const Discover = () => {
+const Discover = (props) => {
     return (
         <div className="mt-4">
             <div className="ib-section-header">Discover</div>
             <div className="pt-4 px-5">
-                <BookCarousel books={books}/>
+                <BookCarousel books={props.books}/>
             </div>
         </div>
     )

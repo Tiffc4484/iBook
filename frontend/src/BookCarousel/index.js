@@ -34,7 +34,7 @@ const BookCarousel = ({books}) => {
             breakpoint: { max: 690, min: 0 },
             items: 1,
             slidesToSlide: 1, // optional, default to 1.
-            partialVisibilityGutter: 330
+            partialVisibilityGutter: 200
         }
     };
 
