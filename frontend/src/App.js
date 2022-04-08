@@ -19,7 +19,6 @@ function App() {
             console.log(`re-render user: ${user.username}`);
         });
     }, [flag]);
-
   return (
     <div className="container-fluid">
         <BrowserRouter>
@@ -36,10 +35,12 @@ function App() {
       </div>
   );
 }
+
 async function getUser() {
   const resRaw = await fetch("/auth/user");
   if (resRaw.status !== 204) {
     return await resRaw.json();
   }
 }
+
 export default App;
