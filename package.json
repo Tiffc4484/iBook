@@ -6,6 +6,8 @@
     "start": "nodemon ./node_modules/nodemon/bin/nodemon.js ./bin/www"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.2",
     "cookie-parser": "~1.4.4",
