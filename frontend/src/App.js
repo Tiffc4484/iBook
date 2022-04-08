@@ -2,7 +2,6 @@ import './App.css';
 import './ib.css';
 import HomeScreen from "./HomeScreen";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-//import "bootstrap/dist/css/bootstrap.min.css";
 import ResultsScreen from "./ResultsScreen";
 import DetailsScreen from "./DetailsScreen";
 import LoginScreen from "./Authentication/LoginScreen";
@@ -11,13 +10,13 @@ import {useEffect, useState} from "react";
 
 function App() {
   const [user, setUser] = useState();
-
+  const [flag, refreshPage] = useState(true);
   useEffect(() => {
     getUser().then((user) => {
       setUser(user);
-      console.log(user);
+      console.log(`re-render user: ${user.username}`);
     });
-  });
+  }, [flag]);
 
   return (
       <div className="container-fluid">
