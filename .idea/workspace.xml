@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5b4bf1e-8310-4c30-8346-e88d226189cc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/Recent/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/LoadingSpinner/LoadingSpinner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/LoadingSpinner/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/BookCarousel/BookCarousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/dummyBooks.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/dummyDiscoverBooks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/Discover/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/HomeHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/TopRated/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/HomeScreen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Service/BooksService.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Service/BooksService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,7 +82,7 @@
       <workItem from="1648781829430" duration="10517000" />
       <workItem from="1648794891789" duration="343000" />
       <workItem from="1649384787655" duration="574000" />
-      <workItem from="1649386516824" duration="391000" />
+      <workItem from="1649386516824" duration="3785000" />
     </task>
     <servers />
   </component>

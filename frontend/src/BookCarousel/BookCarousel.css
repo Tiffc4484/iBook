@@ -10,6 +10,8 @@
 .ib-book-item {
     max-width: 180px;
     min-width: 180px;
+    max-height: 271px;
+    min-height: 271px;
 }
 
 

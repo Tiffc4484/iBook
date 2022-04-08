@@ -1,8 +1,6 @@
 import React from "react";
-import books from "./dummyBooks.json";
 import './Discover.css';
 import BookCarousel from "../../BookCarousel";
-
 
 const Discover = (props) => {
     return (
