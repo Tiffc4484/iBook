@@ -1,6 +1,7 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Rating from "./Rating";
 import item from "./dummyBook.json";
+import cartService from "../ShoppingCart/service/cart-service";
 import $ from "jquery";
 
 const DetailsItem = (props) => {
@@ -15,10 +16,16 @@ const DetailsItem = (props) => {
     const publisher = props.book.publisher ? props.book.publisher : "N/A";
     const publishedDate = props.book.publishedDate ? props.book.publishedDate : "N/A";
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
+    const [currentUser, setCurrentUser] = useState([])
 
     useEffect(() => {
         $("#description").html(description);
     }, []);
+
+    const addToCart = () => {
+        cartService.addBookToCart(currentUser.username, isbn10)
+                .then()
+    }
 
     return (
         <>
@@ -48,7 +55,9 @@ const DetailsItem = (props) => {
                         <div className="ms-2 ib-details-price">
                             $ {price}
                         </div>
-                        <button className="mt-4 btn ib-details-button hvr-push">
+                        <button
+                            onClick={() => addToCart()}
+                            className="mt-4 btn ib-details-button hvr-push">
                             Add to Cart
                         </button>
                     </div>
