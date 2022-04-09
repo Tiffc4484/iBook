@@ -1,5 +1,7 @@
 const CART_URL = "http://localhost:3001/cart"
 const USERS_URL = "http://localhost:3001/api/users"
+const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
+
 
 const addBookToCart = (username, bookId) =>
     fetch(`${CART_URL}/${username}`, {
@@ -11,7 +13,7 @@ const addBookToCart = (username, bookId) =>
     }).then(response => response.json())
 
 const addFavoriteToUser = (username, mealId) =>
-    fetch(`${FAVORITE_URL}/${username}`, {
+    fetch(`${CART_URL}/${username}`, {
         method: 'POST',
         body: JSON.stringify(mealId),
         headers: {
