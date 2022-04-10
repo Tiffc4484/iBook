@@ -1,5 +1,5 @@
 const LOCALHOST_URL = "http://localhost:3001"
-const USERS_URL = "http://localhost:3001/auth/user"
+const USER_URL = "http://localhost:3001/auth/user"
 const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
 
 
@@ -12,7 +12,11 @@ const addBookToCart = (username, bookId) =>
         }
     }).then(response => response.json())
 
-
+const findUser = () =>
+    fetch(`${USER_URL}`, {
+        method: 'GET',
+        credentials: "include"
+    }).then(response => response.json())
 
 const findAllBooksInCart = (username) => {
     fetch(`${LOCALHOST_URL}/${username}/cart`)
@@ -22,5 +26,6 @@ const findAllBooksInCart = (username) => {
 
 export default {
     addBookToCart,
+    findUser,
     findAllBooksInCart
 }

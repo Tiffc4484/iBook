@@ -25,6 +25,16 @@ const DetailsItem = (props) => {
         $("#description").html(description);
     }, []);
 
+    // get current logged user
+    useEffect(() => {
+        cartService.findUser()
+            .then(currUser => {
+                setCurrentUser(currUser)
+            })
+    }, [])
+    console.log(currentUser);
+    console.log("username: " + currentUser.username);
+
     const addToCart = () => {
         cartService.addBookToCart(currentUser.username, bookId)
                 .then()
