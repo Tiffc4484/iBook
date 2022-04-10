@@ -49,7 +49,7 @@ const BookCarousel = ({books}) => {
             responsive={responsive}>
 
             {
-                books.map(book => <BookItem bookItem={book}/>)
+                books.map(book => <BookItem book={book}/>)
             }
             
         </Carousel>

@@ -8,7 +8,7 @@ const DetailsItem = (props) => {
     const authors = props.book.authors ? Object.values(props.book.authors).join(", ") : "N/A";
     const imageLink = props.book.imageLinks ? props.book.imageLinks.smallThumbnail : "/images/no-image.png";
     const rating = props.book.averageRating ? props.book.averageRating : 0;
-    const price = props.book.listPrice ? props.book.listPrice.amount : 15;
+    const price = props.book.listPrice ? props.book.listPrice.amount : props.book.amazonPrice;
     const description = props.book.description ? props.book.description : "N/A";
     const isbn10 = props.book.isbn_10 ? props.book.isbn_10 : "N/A";
     const isbn13 = props.book.isbn_13 ? props.book.isbn_13 : "N/A";
@@ -56,7 +56,7 @@ const DetailsItem = (props) => {
                 </div>
 
                 {/*Description and details are placed below*/}
-                <div className="mt-4">
+                <div className="mt-4 mb-5">
                     <div className="ib-section-header">
                         Description
                     </div>
@@ -72,7 +72,6 @@ const DetailsItem = (props) => {
                         <div>Pages: {pageCount}</div>
                     </div>
                 </div>
-
             </div>
         </>
     )

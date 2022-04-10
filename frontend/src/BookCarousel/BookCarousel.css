@@ -6,14 +6,67 @@
     padding-left: 16px;
 }
 
+/* Contains the book item and the text overlay*/
+.ib-book-container {
+    position: relative;
+    text-align: center;
+}
 
+/* Text overlay at the center of the book */
+.ib-book-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+    opacity: 0;
+    color: black;
+}
+
+.ib-book-center .ib-title {
+    font-size: 20px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0);
+
+
+}
+
+/* The thumbnail image of the book item */
 .ib-book-item {
     max-width: 180px;
     min-width: 180px;
     max-height: 271px;
     min-height: 271px;
+    opacity: 1;
+    transition: 0.5s ease;
 }
 
+/* Hover effect; show text */
+.ib-book-container:hover .ib-book-item {
+    opacity: 0.3;
+}
+
+.ib-book-container:hover .ib-book-center {
+    opacity: 1;
+}
+
+/* Thumbnail rating */
+.ib-rating-star-small {
+    color: #FFD32D !important;
+    font-size: 18px !important;
+    margin-right: 2px !important;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0);
+}
+
+.ib-rating-no-star-small {
+    color: gray !important;
+    font-size: 18px !important;
+    margin-right: 2px !important;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0);
+}
+
+/* Misc. */
 
 .ib-black {
     color: black;

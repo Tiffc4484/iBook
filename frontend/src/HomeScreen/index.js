@@ -8,7 +8,6 @@ import {findRecentBooks, findTopBooks} from "../Service/BooksService";
 import Footer from "../ShoppingCart/Footer";
 import dummyBooks from "./Discover/dummyDiscoverBooks.json";
 import Recent from "./Recent";
-import LoadingSpinner from "../LoadingSpinner";
 
 const HomeScreen = () => {
     const [isLoadingTop, setIsLoadingTop] = useState(true);
