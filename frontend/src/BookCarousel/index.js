@@ -43,8 +43,8 @@ const BookCarousel = ({books}) => {
             swipeable={false}
             draggable={false}
             infinite={true}
-            autoPlay={false}
-            shouldResetAutoplay={false}
+            autoPlay={true}
+            autoPlaySpeed={10*1000}
             partialVisbile={true}
             responsive={responsive}>
 
