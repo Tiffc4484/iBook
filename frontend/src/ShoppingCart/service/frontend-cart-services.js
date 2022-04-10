@@ -3,10 +3,10 @@ const USER_URL = "http://localhost:3001/auth/user"
 const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
 
 
-const addBookToCart = (username, bookId) =>
-    fetch(`${LOCALHOST_URL}/${username}/cart`, {
+const addBookToCart = (userId, book) =>
+    fetch(`${LOCALHOST_URL}/${userId}/cart`, {
         method: 'POST',
-        body: JSON.stringify(bookId),
+        body: JSON.stringify(book),
         headers: {
             'content-type': 'application/json'
         }

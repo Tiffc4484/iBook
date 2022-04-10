@@ -1,4 +1,4 @@
-const cartModel = require('../models/shopping_cart/shoppingCart-model-model')
+const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const userModel = require('../models/shopping_cart/users-model')
 
 const createRecipe = (name, recipe) => {
@@ -6,10 +6,10 @@ const createRecipe = (name, recipe) => {
         .create(recipe)
 }
 
-const addFavoriteToMeal = (recipeId, username) => {
+const addBookToCart = (bookId, username) => {
     return cartModel.updateOne(
         console.log(username),
-        {recipeId: recipeId},
+        {bookId: bookId},
         {$push: {users: username}},
         done
     )
@@ -31,8 +31,6 @@ const deleteBook = (name, book) =>
 
 module.exports = {
     createRecipe,
-    findAllRecipe,
-    findRecipe,
-    findRecipeById,
-    deleteRecipe
+    addBookToCart,
+
 }

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Rating from "./Rating";
 import item from "./dummyBook.json";
-import cartService from "../ShoppingCart/service/cart-service";
+import cartService from "../ShoppingCart/service/frontend-cart-services";
 import $ from "jquery";
 
 const DetailsItem = (props) => {
@@ -18,7 +18,7 @@ const DetailsItem = (props) => {
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
     const currentBook = props.book ? props.book : null;
     const bookId = currentBook.id ? currentBook.id : "N/A";
-    console.log(bookId);
+    console.log(currentBook);
     const [currentUser, setCurrentUser] = useState([])
 
     useEffect(() => {
@@ -33,10 +33,11 @@ const DetailsItem = (props) => {
             })
     }, [])
     console.log(currentUser);
-    console.log("username: " + currentUser.username);
 
     const addToCart = () => {
-        cartService.addBookToCart(currentUser.username, bookId)
+        let username = currentUser.username.slice(0, currentUser.username.lastIndexOf("@"));
+        console.log("username: " + username);
+        cartService.addBookToCart(username, currentBook)
                 .then()
     }
 

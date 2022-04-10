@@ -4,6 +4,6 @@ const shoppingCartSchema = mongoose.Schema({
 //    id: String,
     userId: String,
     books: [String]
-}, {collection: 'shopping_cart'})
+}, {collection: 'cart'})
 
 module.exports = shoppingCartSchema

@@ -78,4 +78,7 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
+
+require('./server_node/controller/cart-controller')(app)
+
 module.exports = app;
