@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import Navigation from "../Navigation";
+import ResultItem from "../ResultsScreen/ResultItem";
+import Results from "../ResultsScreen/Results";
 import styled from "styled-components";
 import {Add, Remove,} from "@material-ui/icons";
 import items from "../DummyData/dummyBooks.json";
@@ -90,6 +92,8 @@ const ProductAmount = styled.div`
 const ProductPrice = styled.div``;
 
 const CartScreen = () => {
+    const [books, setBooks] = useState([]);
+
     return (
         <div>
             <Navigation/>

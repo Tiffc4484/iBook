@@ -16,6 +16,9 @@ const DetailsItem = (props) => {
     const publisher = props.book.publisher ? props.book.publisher : "N/A";
     const publishedDate = props.book.publishedDate ? props.book.publishedDate : "N/A";
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
+    const currentBook = props.book ? props.book : null;
+    const bookId = currentBook.id ? currentBook.id : "N/A";
+    console.log(bookId);
     const [currentUser, setCurrentUser] = useState([])
 
     useEffect(() => {
@@ -23,7 +26,7 @@ const DetailsItem = (props) => {
     }, []);
 
     const addToCart = () => {
-        cartService.addBookToCart(currentUser.username, isbn10)
+        cartService.addBookToCart(currentUser.username, bookId)
                 .then()
     }
 

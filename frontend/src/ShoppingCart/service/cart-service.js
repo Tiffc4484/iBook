@@ -4,7 +4,7 @@ const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
 
 
 const addBookToCart = (username, bookId) =>
-    fetch(`${CART_URL}/${username}`, {
+    fetch(`${CART_URL}/${username}/${bookId}`, {
         method: 'POST',
         body: JSON.stringify(username),
         headers: {
