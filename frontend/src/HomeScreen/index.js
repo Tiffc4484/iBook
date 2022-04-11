@@ -7,7 +7,8 @@ import TopRated from "./TopRated";
 import {findTopBooks} from "../Service/BooksService";
 import Footer from "../ShoppingCart/Footer";
 
-const HomeScreen = () => {
+
+const HomeScreen = (props) => {
 
     const [topBooks, setTopBooks] = useState([]);
     useEffect(() => fetchTopBooks(), []);
@@ -16,6 +17,7 @@ const HomeScreen = () => {
         findTopBooks()
             .then(response => setTopBooks(response.data.books))
     }
+
     return (
         <>
             <Navigation user = {props.user}/>
