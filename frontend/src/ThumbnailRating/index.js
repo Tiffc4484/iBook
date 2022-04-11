@@ -1,4 +1,5 @@
 import React from 'react';
+import './ThumbnailRating.css';
 
 const ThumbnailRating = ({rating}) => {
     if (rating < 1) {

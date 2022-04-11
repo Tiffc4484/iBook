@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import ThumbnailRating from "./ThumbnailRating";
+import ThumbnailRating from "../ThumbnailRating"
 
 const BookItem = (props) => {
     let title = props.book.title ? props.book.title : "No Title";
