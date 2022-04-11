@@ -5,10 +5,17 @@ import Discover from "./Discover";
 import "./HomeScreen.css";
 import TopRated from "./TopRated";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
+    const [topBooks, setTopBooks] = useState([]);
+    useEffect(() => fetchTopBooks(), []);
+
+    const fetchTopBooks = () => {
+        findTopBooks()
+            .then(response => setTopBooks(response.data.books))
+    }
     return (
         <>
-            <Navigation/>
+            <Navigation user = {props.user}/>
             <HomeHeader/>
             <Discover/>
             <TopRated/>
