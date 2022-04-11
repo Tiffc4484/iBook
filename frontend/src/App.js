@@ -6,20 +6,21 @@ import ResultsScreen from "./ResultsScreen";
 import DetailsScreen from "./DetailsScreen";
 import LoginScreen from "./Authentication/LoginScreen";
 import SignUpScreen from "./Authentication/SignUpScreen";
+import CartScreen from "./ShoppingCart/CartScreen";
 import {useEffect, useState} from "react";
 
-function App() {
-  const [user, setUser] = useState();
-  const [flag, refreshPage] = useState(true);
-  useEffect(() => {
-    getUser().then((user) => {
-      setUser(user);
-      console.log(`re-render user: ${user.username}`);
-    });
-  }, [flag]);
 
+function App() {
+    const [user, setUser] = useState();
+    const [flag, refreshPage] = useState(true);
+    useEffect(() => {
+        getUser().then((user) => {
+            setUser(user);
+            console.log(`re-render user: ${user.username}`);
+        });
+    }, [flag]);
   return (
-      <div className="container-fluid">
+    <div className="container-fluid">
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomeScreen user = {user} />}></Route>
@@ -33,10 +34,12 @@ function App() {
       </div>
   );
 }
+
 async function getUser() {
   const resRaw = await fetch("/auth/user");
   if (resRaw.status !== 204) {
     return await resRaw.json();
   }
 }
+
 export default App;

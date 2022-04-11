@@ -1,12 +1,12 @@
 import React from "react";
 import ResultItem from "./ResultItem";
-import books from '../DummyData/dummyBooks.json';
 
-const Results = () => {
+const Results = ({books}) => {
     return (
         <>
             <div className="ib-section-header">Results</div>
-            <div className="mt-4 mx-5 row align-items-center">
+
+            <div className="mt-4 mx-5 row">
                 {
                     books.map(book => <ResultItem book={book}/>)
                 }

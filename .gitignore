@@ -5,8 +5,8 @@ node_modules/
 .env
 
 
-# Optional npm cache directory
-.npm
+# misc
+.DS_Store
 
 # Microbundle cache
 .rpt2_cache/
@@ -16,3 +16,5 @@ node_modules/
 
 # Gatsby files
 .cache/
+
+.idea

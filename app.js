@@ -13,9 +13,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const authRouter = require('./routes/authentication');
+const indexRouter = require('./server_node/routes/index');
+const usersRouter = require('./server_node/routes/users');
+const authRouter = require('./server_node/routes/authentication');
 
 
 app.all('*', function (req, res, next) {
