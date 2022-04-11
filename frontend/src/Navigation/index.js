@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Navigation.css";
+import PropTypes from "prop-types";
 
-const Navigation = () => {
+export default function Navigation (props) {
+    async function logout() {
+        const resRaw = await fetch("/users/logout");
+        if (!resRaw.ok) {
+            const res = await resRaw.text();
+            alert(res);
+        }
+        document.cookie = "_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        window.location = "/";
+    }
     return (
         <>
             <div className="d-flex justify-content-between align-items-center">
@@ -20,19 +30,34 @@ const Navigation = () => {
                         <Link to="/shopping_cart">
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
                         </Link>
-                        <Link to="/auth/login">
-                            <button
+                        {!props.user? (
+                            <Link to="/auth/login">
+                                <button
                                 className="ms-4 btn btn-primary ib-nav-button" >
                                 Login or Create Account
-                            </button>
-                        </Link>
+                                </button>
+                            </Link>
+                        ) : (
+                            <div className="dropdown ms-4">
+                                <button className="btn btn-primary ib-nav-button dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Welcome, {props.user.username}
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <Link to="#" className="dropdown-item" onClick={logout}>
+                                        Logout
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
         </>
     )
-
-
 }
-
-export default Navigation;
+Navigation.propTypes = {
+    user: PropTypes.object,
+};
