@@ -24,7 +24,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-const mongo = require("../src/mongo");
+const mongo = require("../server_node/src/mongo");
 mongo.connect().then(() => {
   server.listen(port);
   console.log("listen to port: " + port);
