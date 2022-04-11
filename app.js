@@ -4,9 +4,10 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
+const cors = require('cors');
 require("dotenv").config();
 const app = express();
-
+app.use(cors())
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -54,17 +55,6 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
-});
-
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "frontend/public/index.html"));
-// });
-app.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', req.headers.origin);//获取请求源 这样所有请求就都有访问权限了
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length, Authorization, Accept,X-Requested-With')
-  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
-  next()
 });
 
 // error handler

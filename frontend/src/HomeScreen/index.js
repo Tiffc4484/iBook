@@ -9,7 +9,7 @@ import Footer from "../ShoppingCart/Footer";
 import dummyBooks from "./Discover/dummyDiscoverBooks.json";
 import Recent from "./Recent";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
     const [isLoadingTop, setIsLoadingTop] = useState(true);
     const [isLoadingRecent, setIsLoadingRecent] = useState(true);
     const [topBooks, setTopBooks] = useState([]);
@@ -40,7 +40,7 @@ const HomeScreen = () => {
 
     return (
         <>
-            <Navigation/>
+            <Navigation user = {props.user}/>
             <HomeHeader/>
             <Discover books={discoverBooks}/>
             <TopRated books={topBooks} spinner={isLoadingTop}/>

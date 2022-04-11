@@ -7,7 +7,7 @@ const routeUtils = require("../src/routeUtils");
 const { ObjectId } = require("mongodb");
 
 const bcrypt = require("bcrypt");
-router.use("/", routeUtils.checkLogStatus);
+
 
 router.post("/login", async (req, res) => {
     if (req.body.username === undefined || req.body.password === undefined) {
