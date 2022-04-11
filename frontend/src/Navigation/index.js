@@ -43,10 +43,10 @@ export default function Navigation (props) {
                                         id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Welcome, {props.user.username}
                                 </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <ul className="mt-3 dropdown-menu ib-dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li>
                                         <Link to="#" className="dropdown-item" onClick={logout}>
-                                        Logout
+                                            &#128075; &nbsp; Logout
                                         </Link>
                                     </li>
                                 </ul>
