@@ -1,0 +1,642 @@
+{
+  "success": true,
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "books": [
+      {
+        "id": "g-PbDwAAQBAJ",
+        "title": "Think Like a Cat",
+        "authors": [
+          "Pam Johnson-Bennett"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2011-09-27",
+        "description": "America's favorite cat behavior expert, author of Catwise and Cat vs. Cat, offers the most complete resource for cat owners of all stripes, now fully updated. \"The queen of cat behavior\" - Steve Dale, author of My Pet World Think it's impossible to train a cat? Think again! By learning how to think like a cat, you'll be amazed at just how easy it is. Whether you are a veteran cat lover, a brand-new owner of a sweet kitten, or the frustrated companion of a feline whose driving you crazy, Pam Johnson-Bennett will help you understand what makes your cat tick (as well as scratch and purr). Topics range from where to get a cat to securing a vet; from basic health care to treating more serious problems; choosing an inrresistible scratching post and avoiding litterbox problems. A comprehensive guide to cat care and training, she helps you understand the instincts that guide feline behavior. Using behavior modification and play therapy techniques, she shares successful methods that will help you and your cat build a great relationship.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 432,
+        "averageRating": 4.5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=g-PbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=g-PbDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0143119796",
+        "isbn_13": "9780143119791",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "U2rqf1CwMj8C",
+        "title": "Temple Cat",
+        "authors": [
+          "Andrew Clements"
+        ],
+        "publisher": "Houghton Mifflin Harcourt",
+        "publishedDate": "2001-03",
+        "description": "A temple cat in ancient Egypt grows tired of being worshipped and cared for in a reverent fashion and travels to the seaside, where she finds genuine affection with a fisherman and his children.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 31,
+        "averageRating": 2.5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=U2rqf1CwMj8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=U2rqf1CwMj8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0618111395",
+        "isbn_13": "9780618111398",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "z5vPIEM-wFEC",
+        "title": "The Cat Who Said Cheese",
+        "authors": [
+          "Lilian Jackson Braun"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "1997",
+        "description": "When a bombing wrecks a hotel, kills a housekeeper, and threatens to destroy the Great Food Expo, Qwilleran and his feline sleuths, Koko and Yum Yum, embark on a culinary quest to find a killer",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 264,
+        "averageRating": 3.5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=z5vPIEM-wFEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=z5vPIEM-wFEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0515120278",
+        "isbn_13": "9780515120271",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "20Ws5ed46KkC",
+        "title": "The Cat Who Brought Down the House",
+        "authors": [
+          "Lilian Jackson Braun"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2003",
+        "description": "Reluctant millionaire and small town reporter Jim Qwilleran and his cats, Koko and Yum Yum, confront a new mystery when octogenarian Thelma Thackerary returns to Moose County to turn the old opera house into a film club. Reprint.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 246,
+        "averageRating": 2.5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=20Ws5ed46KkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=20Ws5ed46KkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0515136557",
+        "isbn_13": "9780515136555",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "2ZRBDwAAQBAJ",
+        "title": "The Veterinarians' Guide to Your Cat's Symptoms",
+        "authors": [
+          "Michael S. Garvey",
+          "Anne E. Hohenhaus",
+          "Katherine A. Houpt"
+        ],
+        "publisher": "Villard Books",
+        "publishedDate": "1999",
+        "description": "Provides an overview of common feline ailments and their symptoms, accompanied by advice on cat breeds, emergency first aid, diagnostic tests, medical terms, and behaviorial issues",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 175,
+        "averageRating": 5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=2ZRBDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=2ZRBDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0375752277",
+        "isbn_13": "9780375752278",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "yzs6HicjgsAC",
+        "title": "Cat's Cradle",
+        "authors": [
+          "Kurt Vonnegut"
+        ],
+        "publisher": "Dial Press Trade Paperback",
+        "publishedDate": "1998-09-08",
+        "description": "“A free-wheeling vehicle . . . an unforgettable ride!”—The New York Times Cat’s Cradle is Kurt Vonnegut’s satirical commentary on modern man and his madness. An apocalyptic tale of this planet’s ultimate fate, it features a midget as the protagonist, a complete, original theology created by a calypso singer, and a vision of the future that is at once blackly fatalistic and hilariously funny. A book that left an indelible mark on an entire generation of readers, Cat’s Cradle is one of the twentieth century’s most important works—and Vonnegut at his very best. “[Vonnegut is] an unimitative and inimitable social satirist.”—Harper’s Magazine “Our finest black-humorist . . . We laugh in self-defense.”—Atlantic Monthly",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 304,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=yzs6HicjgsAC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=yzs6HicjgsAC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "038533348X",
+        "isbn_13": "9780385333481",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "IifXCwAAQBAJ",
+        "title": "The Trainable Cat",
+        "authors": [
+          "John Bradshaw",
+          "Sarah Ellis"
+        ],
+        "publisher": "Basic Books",
+        "publishedDate": "2016-09-13",
+        "description": "A New York Times Bestseller \"I have to hand it to Bradshaw and Ellis: Once you suss out their basic cat-training philosophy, their methods totally work.\" --Slate We often assume that cats can't be trained, and don't need to be. But in The Trainable Cat, bestselling anthrozoologist John Bradshaw and cat expert Sarah Ellis show that cats absolutely must be trained in order to enrich the bond between pet and owner. Full of training tips and exercises--from introducing your cat to a new baby to helping them deal with visits to the vet--The Trainable Cat is the essential cat bible for cat owners and lovers. \"I doubt you'll find a more well-informed or scientific book on cats that better shows you how feline thinking works.\"--Times (UK)",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 352,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=IifXCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=IifXCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": {
+          "amount": 13.99,
+          "currencyCode": "USD"
+        },
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0465096492",
+        "isbn_13": "9780465096497",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "czAXDAAAQBAJ",
+        "title": "They All Saw a Cat",
+        "authors": [
+          "Brendan Wenzel"
+        ],
+        "publisher": "Chronicle Books",
+        "publishedDate": "2016-08-30",
+        "description": "They All Saw A Cat — New York Times bestseller and 2017 Caldecott Medal and Honor Book The cat walked through the world, with its whiskers, ears, and paws . . . In this glorious celebration of observation, curiosity, and imagination, Brendan Wenzel shows us the many lives of one cat, and how perspective shapes what we see. When you see a cat, what do you see? If you and your child liked The Girl Who Drank the Moon, Finding Winnie, and Radiant Child — you'll love They All Saw A Cat \"An ingenious idea, gorgeously realized.\" —Shelf Awareness, starred review \"Both simple and ingenious in concept, Wenzel's book feels like a game changer.\" —The Huffington Post",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 44,
+        "averageRating": 4.5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=czAXDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=czAXDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "1452150486",
+        "isbn_13": "9781452150482",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "nFBZtAEACAAJ",
+        "title": "My Cat Book",
+        "authors": [
+          "Running Press"
+        ],
+        "publisher": "Running Press Kids",
+        "publishedDate": "2018-10-09",
+        "description": "The purrfect cat baby book and journal for your favorite feline family member! You've just brought home the most adorable kitten or adopted a rescue cat who needs a loving home. What could be better than keeping a record of all the firsts, milestones, stories, and pictures of your feline friend? Now, with My Cat Book, you'll be able to write down and share all of the special memories you make with your adorable kitty as well as keep track of all the important dates and facts about your favorite pet. Like a baby book but for your feline friend, and complete with whimsical illustrations throughout, this is the gift for the young cat lover and new pet owner.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 80,
+        "averageRating": null,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=nFBZtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=nFBZtAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0762491639",
+        "isbn_13": "9780762491636",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "Qx--DQAAQBAJ",
+        "title": "The Cat Who Came in Off the Roof",
+        "authors": [
+          "Annie M. G. Schmidt"
+        ],
+        "publisher": "Yearling Books",
+        "publishedDate": "2017-01-17",
+        "description": "\"Originally published in hardcover in Dutch as Minoes in Amsterdam, The Netherlands, in 1970\"--Copyright page.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 160,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=Qx--DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=Qx--DQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0553535021",
+        "isbn_13": "9780553535020",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "rnyakraHGdcC",
+        "title": "The Cat - E-Book",
+        "authors": [
+          "Susan Little"
+        ],
+        "publisher": "Elsevier Health Sciences",
+        "publishedDate": "2011-10-14",
+        "description": "Comprehensive in scope and exclusively devoted to feline medical care, Dr. Susan Little's The Cat: Clinical Medicine and Management is an essential resource for anyone who provides complete, state-of-the-art care to cats. In one convenient volume, you'll find authoritative, clinically-focused information enhanced by full-color illustrations, tables, boxes, algorithms, key points, and much more — all in a format designed for quick access. Dr. Little and her expert contributors address the unique concerns and challenges facing the feline practitioner, including the latest advances in feline medical diagnosis and management and their clinical applications to everyday practice. User-friendly and complete, The Cat is also available as an e-book, giving you easy access to the complete, fully-searchable contents online. Covers the latest advances in feline medicine from a systemic and adjunctive care perspective. It's the most comprehensive feline medical reference available with a strong clinical focus. Helps you meet the increasing demand for state-of-the-art medical care by cat owners — including advanced diagnostic services and treatments designed to extend and improve quality of life for feline companions. Features a full-color design with hundreds of schematic drawings, tables, boxes, key points, algorithms, and photographs for quick and easy access to information. Addresses key topics unique to feline medicine and not currently covered in other books, including: insights and clinical advances attributable to the mapping of the feline genome; medical conditions associated with behavioral problems; managing the feline patient with co-existing and chronic disease; special medical problems and care considerations for the geriatric cat; environmental enrichment for the indoor cat; feline zoonotic agents and implications for human health; and shelter medicine and overpopulation solutions. Provides in-depth information on indoor cats and senior cats, including timely guidance on meeting owners' expectations for longer, healthier lives for their cats. Addresses the challenges of pet overpopulation, particularly the impact of millions of feral cats on public health and the environment. Presents information written in the manner of expanded conference proceedings, delivering the latest insights and most current approaches to management of feline medical disorders. Includes contributions from approximately 60 contributors, drawing on the valuable expertise of those most knowledgeable in the field of feline medical care. Bears the full endorsement of the Winn Feline Foundation, a non-profit organization that supports studies about cat health and funds feline research projects worldwide, and is internationally regarded as a major contributor to the health and wellbeing of all cats. The complete contents also are available online through Veterinary Consult.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 1424,
+        "averageRating": null,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=rnyakraHGdcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=rnyakraHGdcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": {
+          "amount": 162.99,
+          "currencyCode": "USD"
+        },
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "1437706614",
+        "isbn_13": "9781437706611",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "Et74DAAAQBAJ",
+        "title": "Here Comes Santa Cat",
+        "authors": [
+          "Deborah Underwood"
+        ],
+        "publisher": "Penguin",
+        "publishedDate": "2016-10",
+        "description": "Just in time for the holidays--here comes Santa Cat From the author of The Quiet Book and Here Comes the Easter Cat comes a hilarious holiday adventure Cat took on a bunny in Here Comes the Easter Cat, but now Christmas is coming, and Cat has a hunch he's not on Santa's \"nice\" list. Which means? No presents for Cat. So he tries to be good, but children, it seems, aren't wild for his brand of gift-giving. Still, Cat might surprise himself, and best of all, he may just get to meet the man in the red suit himself--and receive a holiday surprise of his own. Fans of Pete the Cat, Splat the Cat, and Bad Kitty will delight in this holiday treat. * \"Excellent . . . An ideal holiday pick for the naughty and nice alike.\"--Publishers Weekly, starred review \"There is a sweetness to this story that illustrates the joy of sharing in a manner that is refreshingly free of goody-goody or didactic sentiment. . . . Get yourself--and all the little ones in your life--a copy of Here Comes Santa Cat, and you will all treasure it for years to come.\"--Katrina Fleming for OurHenHouse.org",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 88,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=Et74DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=Et74DAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0425287955",
+        "isbn_13": "9780425287958",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "wX3hjwEACAAJ",
+        "title": "Pete the Cat: Five Little Ducks",
+        "authors": [
+          "James Dean"
+        ],
+        "publisher": "HarperCollins",
+        "publishedDate": "2017-01-24",
+        "description": null,
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 32,
+        "averageRating": null,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=wX3hjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=wX3hjwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0062404482",
+        "isbn_13": "9780062404480",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "EMIrDwAAQBAJ",
+        "title": "Really Important Stuff My Cat Has Taught Me",
+        "authors": [
+          "Cynthia L. Copeland"
+        ],
+        "publisher": "Workman Publishing",
+        "publishedDate": "2017-10-03",
+        "description": "A book that will delight every cat lover, full of wise and unforgettable life lessons, each paired with the perfect photo. Cats are the ultimate savants, possessing intelligence, poise, and sass in equal measure. They know when to play it cool, and when to pounce; when to fly solo, and when to cuddle up. Entertaining, unpredictable, and just a bit wild, cats encourage us to explore, take chances, and live on the edge—just as if we too had nine lives. Cynthia L. Copeland, author of the bestselling Really Important Stuff My Dog Has Taught Me and Really Important Stuff My Kids Have Taught Me, now turns her attention to our mysterious feline friends. Every page of this full-color gift book is a joyful reminder of what’s important in life. Like Confidence: “Insist on a seat at the table.” Curiosity: “Have more questions than answers.” Adventure: “Sometimes you have to leap before you look.” Individuality: “You’ll be remembered for what sets you apart.” Kindness: “Recognize the power of your purr.” And Solitude: “Find your own square of sunshine.”",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 176,
+        "averageRating": 5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=EMIrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=EMIrDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "1523501480",
+        "isbn_13": "9781523501489",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "JvMWBQAAQBAJ",
+        "title": "Cat Sense",
+        "authors": [
+          "John Bradshaw"
+        ],
+        "publisher": "Basic Books (AZ)",
+        "publishedDate": "2013-09-10",
+        "description": "Cats have been popular household pets for thousands of years, and their numbers only continue to rise. Today there are three cats for every dog on the planet, and yet cats remain more mysterious, even to their most adoring owners. Unlike dogs, cats evolved as solitary hunters, and, while many have learned to live alongside humans and even feel affection for us, they still don’t quite “get us” the way dogs do, and perhaps they never will. But cats have rich emotional lives that we need to respect and understand if they are to thrive in our company. In Cat Sense, renowned anthrozoologist John Bradshaw takes us further into the mind of the domestic cat than ever before, using cutting-edge scientific research to dispel the myths and explain the true nature of our feline friends. Tracing the cat’s evolution from lone predator to domesticated companion, Bradshaw shows that although cats and humans have been living together for at least eight thousand years, cats remain independent, predatory, and wary of contact with their own kind, qualities that often clash with our modern lifestyles. Cats still have three out of four paws firmly planted in the wild, and within only a few generations can easily revert back to the independent way of life that was the exclusive preserve of their predecessors some 10,000 years ago. Cats are astonishingly flexible, and given the right environment they can adapt to a life of domesticity with their owners—but to continue do so, they will increasingly need our help. If we’re to live in harmony with our cats, Bradshaw explains, we first need to understand their inherited quirks: understanding their body language, keeping their environments—however small—sufficiently interesting, and becoming more proactive in managing both their natural hunting instincts and their relationships with other cats. A must-read for any cat lover, Cat Sense offers humane, penetrating insights about the domestic cat that challenge our most basic assumptions and promise to dramatically improve our pets’ lives—and ours.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 336,
+        "averageRating": null,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=JvMWBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=JvMWBQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0465031013",
+        "isbn_13": "9780465031016",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "6J0sDgAAQBAJ",
+        "title": "The Catawampus Cat",
+        "authors": [
+          "Jason Carter Eaton"
+        ],
+        "publisher": "Crown Books For Young Readers",
+        "publishedDate": "2017",
+        "description": "The Catawampus Cat walked into town one day at a slant, and since then everyone in town is seeing their world with fresh eyes.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 32,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=6J0sDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=6J0sDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0553509713",
+        "isbn_13": "9780553509717",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "Y0Jhv2lSCTQC",
+        "title": "The Cat of Bubastes",
+        "authors": [
+          "G. A. Henty"
+        ],
+        "publisher": "Courier Corporation",
+        "publishedDate": "2002-01-01",
+        "description": "In 1250 B.C. the teenaged son of the Egyptian high priest sets off a series of harrowing events when he accidentally kills the sacred cat of Bubastes and, accompanied by his sister and two foreign slaves, embarks on a dangerous journey to find safe havenbeyond the borders of Egypt.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 320,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=Y0Jhv2lSCTQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=Y0Jhv2lSCTQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0486423638",
+        "isbn_13": "9780486423630",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "7XD1i8bTHp0C",
+        "title": "Pete the Cat: I Love My White Shoes",
+        "authors": [
+          "Eric Litwin",
+          "Kimberly Dean"
+        ],
+        "publisher": "Harper Collins",
+        "publishedDate": "2010-12-07",
+        "description": "Don't miss the first and bestselling book in the beloved Pete the Cat series! Pete the Cat goes walking down the street wearing his brand-new white shoes. Along the way, his shoes change from white to red to blue to brown to WET as he steps in piles of strawberries, blueberries, and other big messes! But no matter what color his shoes are, Pete keeps movin' and groovin' and singing his song...because it's all good. Pete the Cat: I Love My White Shoes asks the reader questions about the colors of different foods and objects—kids love to interact with the story. The fun never stops—download the free groovin’ song. Don't miss Pete's other adventures, including Pete the Cat: Rocking in My School Shoes, Pete the Cat and His Four Groovy Buttons, Pete the Cat Saves Christmas, Pete the Cat and His Magic Sunglasses, Pete the Cat and the Bedtime Blues, Pete the Cat and the New Guy, Pete the Cat and the Cool Cat Boogie, Pete the Cat and the Missing Cupcakes, Pete the Cat and the Perfect Pizza Party, and Pete the Cat: Crayons Rock!",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 40,
+        "averageRating": 4,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=7XD1i8bTHp0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=7XD1i8bTHp0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": {
+          "amount": 8.99,
+          "currencyCode": "USD"
+        },
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "0062065602",
+        "isbn_13": "9780062065605",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "QZxIVzBljYIC",
+        "title": "Old Possum's Book of Practical Cats",
+        "authors": [
+          "Thomas Stearns Eliot"
+        ],
+        "publisher": "Houghton Mifflin Harcourt",
+        "publishedDate": "2009",
+        "description": "T. S. Eliot's playful cat poems were originally composed for his godchildren, with Eliot posing as Old Possum himself, and later inspired the legendary musical \"Cats.\" Now with vibrant illustrations by the award-winning Axel Scheffler.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 64,
+        "averageRating": 5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=QZxIVzBljYIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=QZxIVzBljYIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "054724827X",
+        "isbn_13": "9780547248271",
+        "other_IndustryIdentifier": null
+      },
+      {
+        "id": "r3sBEAAAQBAJ",
+        "title": "1 2 3 Cats: A Cat Counting Book",
+        "authors": [
+          "Lesléa Newman"
+        ],
+        "publisher": "Candlewick Press (MA)",
+        "publishedDate": "2021-05-04",
+        "description": "Count on cats as a fun way to learn numbers--in rhyming spreads with expressive appeal for animal lovers of all ages. Cat Number One has nothing to do . . . Until she makes friends with Cat Number Two. Meet cats from one to a dozen in this adorable board book introduction to counting with a feline twist. Author Lesléa Newman draws on her love for (and familiarity with) cats in a concept book for the very young, while illustrator Isabella Kung captures the animals' movements and gestures in a way that is sure to delight.",
+        "mainCategory": null,
+        "height": null,
+        "width": null,
+        "thickness": null,
+        "pageCount": 26,
+        "averageRating": 5,
+        "ratingsCount": null,
+        "imageLinks": {
+          "thumbnail": "http://books.google.com/books/content?id=r3sBEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+          "smallThumbnail": "http://books.google.com/books/content?id=r3sBEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "small": null,
+          "medium": null,
+          "large": null,
+          "extraLarge": null
+        },
+        "listPrice": null,
+        "amazonPrice": 9.99,
+        "amazonRating": 4.5,
+        "isbn_10": "1536209953",
+        "isbn_13": "9781536209952",
+        "other_IndustryIdentifier": null
+      }
+    ]
+  }
+}

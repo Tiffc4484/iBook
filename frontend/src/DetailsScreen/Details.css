@@ -37,15 +37,16 @@
 .ib-rating-star {
     color: #FFD32D !important;
     font-size: 30px !important;
-    margin-right: 6px;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3) !important;
+    margin-right: 6px !important;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    -webkit-text-stroke: 1px #F78812;
 }
 
 .ib-rating-no-star {
     color: gray !important;
     font-size: 30px !important;
-    margin-right: 6px;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3) !important;
+    margin-right: 6px !important;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 
