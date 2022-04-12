@@ -12,9 +12,11 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 const indexRouter = require('./server_node/routes/index');
 const usersRouter = require('./server_node/routes/users');
 const authRouter = require('./server_node/routes/authentication');
+const cartRouter = require('./server_node/controller/cart-controller');
 
 
 app.all('*', function (req, res, next) {
@@ -48,6 +50,7 @@ app.use(
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
+app.use('/:username/cart', cartRouter)
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 
@@ -77,7 +80,6 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 require('./server_node/controller/cart-controller')(app)
 

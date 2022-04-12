@@ -1,8 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const shoppingCartSchema = mongoose.Schema({
 //    id: String,
-    userId: String,
+    username: String,
     books: [String]
 }, {collection: 'cart'})
 

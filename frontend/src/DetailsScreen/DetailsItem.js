@@ -17,9 +17,9 @@ const DetailsItem = (props) => {
     const publishedDate = props.book.publishedDate ? props.book.publishedDate : "N/A";
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
     const currentBook = props.book ? props.book : null;
-    const bookId = currentBook.id ? currentBook.id : "N/A";
-    console.log(currentBook);
+    //const bookId = currentBook.id ? currentBook.id : "N/A";
     const [currentUser, setCurrentUser] = useState([])
+   // const [currentBook, setCurrentBook] = useState([])
 
     useEffect(() => {
         $("#description").html(description);
@@ -31,12 +31,16 @@ const DetailsItem = (props) => {
             .then(currUser => {
                 setCurrentUser(currUser)
             })
+        //setCurrentBook(props.book ? props.book : null);
     }, [])
     console.log(currentUser);
 
     const addToCart = () => {
+        let user = currentUser.username;
+        console.log("username: " + user);
         let username = currentUser.username.slice(0, currentUser.username.lastIndexOf("@"));
         console.log("username: " + username);
+        console.log(currentBook);
         cartService.addBookToCart(username, currentBook)
                 .then()
     }

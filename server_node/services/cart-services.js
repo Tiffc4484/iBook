@@ -1,20 +1,15 @@
 const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const userModel = require('../models/shopping_cart/users-model')
 
-const createRecipe = (name, recipe) => {
-    return cartModel
-        .create(recipe)
-}
 
-const addBookToCart = (bookId, username) => {
-    return cartModel.updateOne(
-        console.log(username),
-        {bookId: bookId},
-        {$push: {users: username}},
-        done
+const addBookToCart = (bookId, book) => {
+    return cartModel.create(
+        //console.log(username),
+        book
+
     )
 }
-const findAllBooksInCart = () =>
+const findAllBooksInCartForUser = () =>
     cartModel.find()
 
 // const findRecipe = (name) =>
@@ -30,7 +25,6 @@ const deleteBook = (name, book) =>
     cartModel.deleteOne({strMeal: name})
 
 module.exports = {
-    createRecipe,
     addBookToCart,
-
+    findAllBooksInCartForUser
 }
