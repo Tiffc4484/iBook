@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import Navigation from "../Navigation";
 import ResultItem from "../ResultsScreen/ResultItem";
 import Results from "../ResultsScreen/Results";
@@ -53,9 +54,6 @@ const Product = styled.div`
 
 `;
 
-const Summary = styled.div`
-    flex: 1;
-`;
 
 const ProductDetail = styled.div`
     flex: 2;
@@ -70,26 +68,57 @@ const Image = styled.img`
 const Details = styled.div`
     padding: 20px;
     display: flex;
+    flex-direction: column;
     
 `;
-const ProductName = styled.span``;
+const ProductName = styled.span`
+    padding: 10px;`;
 const PriceDetail = styled.div`
     flex: 1;
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 `;
 
 const ProductAmountContainer = styled.div`
+    margin: 25px;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 `;
 const ProductAmount = styled.div`
     font=size: 24px;
     margin: 5px
 `;
-const ProductPrice = styled.div``;
+const ProductPrice = styled.div`
+    font-size: 20px;
+    font-weight: 200;
+`;
+
+const Summary = styled.div`
+  flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+`;
+
+const SummaryTitle = styled.h1`
+  font-weight: 200;
+`;
+
+const SummaryItem = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => props.type === "total" && "500"};
+  font-size: ${(props) => props.type === "total" && "24px"};
+`;
+
+const SummaryItemText = styled.span``;
+
+const SummaryItemPrice = styled.span``;
+
 
 const CartScreen = () => {
     const [books, setBooks] = useState([]);
@@ -100,7 +129,8 @@ const CartScreen = () => {
             <Wrapper>
                 <Title>Your Shopping Cart</Title>
                 <Top>
-                    <TopButton>Continue Shopping</TopButton>
+                    <TopButton>
+                        <Link to='/'>Continue Shopping</Link></TopButton>
                     <div>
                         <TopText>Shopping Cart(2)</TopText>
                         <TopText>Wish List(1)</TopText>
@@ -114,7 +144,8 @@ const CartScreen = () => {
                             <ProductDetail>
                                 <Image src={items[0].volumeInfo.imageLinks.small}></Image>
                                 <Details>
-                                    <ProductName><b>The Google Story</b></ProductName>
+                                    <ProductName><b>Name: </b>The Google Story</ProductName>
+                                    <ProductName><b>Author: </b>{items[0].volumeInfo.authors}</ProductName>
 
                                 </Details>
                             </ProductDetail>
@@ -129,7 +160,23 @@ const CartScreen = () => {
                         </Product>
                     </Info>
                     <Summary>
-                        Summary
+                        <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+                    <SummaryItem>
+                        <SummaryItemText>Subtotal</SummaryItemText>
+                        <SummaryItemPrice>$ 11.99</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Estimated Shipping</SummaryItemText>
+                        <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem type="total">
+                        <SummaryItemText>Total</SummaryItemText>
+                        <SummaryItemPrice>$ 11.99</SummaryItemPrice>
+                    </SummaryItem>
                     </Summary>
                 </Bottom>
             </Wrapper>
