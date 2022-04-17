@@ -1,0 +1,41 @@
+
+.ib-browse-large-img {
+    max-width: 300px;
+    min-width: 300px;
+    max-height: 400px;
+    min-height: 400px;
+}
+
+.ib-browse-text-container {
+    max-width: 300px;
+}
+
+.ib-browse-header {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #4A8CE1;
+    position: relative;
+}
+
+.ib-browse-header:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #191970;
+    left: -200px;
+    top: 50%;
+    position: absolute;
+}
+
+.ib-browse-header:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #191970;
+    right: -200px;
+    top: 50%;
+    position: absolute;
+}

@@ -26,7 +26,9 @@ export default function Navigation (props) {
                     <div className="d-flex align-items-center">
                         <Link to="/"><span className="ms-4">Home</span></Link>
                         <span className="ms-4">About Us</span>
-                        <span className="ms-4">Browse</span>
+                        <Link to="/browse">
+                            <span className="ms-4">Browse</span>
+                        </Link>
                         <Link to="/shopping_cart">
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
                         </Link>
