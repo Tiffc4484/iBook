@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const shoppingCartSchema = mongoose.Schema({
-//    id: String,
     username: String,
     books: [String]
 }, {collection: 'cart'})

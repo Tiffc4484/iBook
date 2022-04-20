@@ -5,3 +5,9 @@
     padding: 8px 20px;
     border-radius: 18px;
 }
+
+.ib-dropdown-menu {
+    width: 100%;
+    border: 2px solid #BDD7F9;
+    border-radius: 18px;
+}

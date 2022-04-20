@@ -13,7 +13,6 @@ const HomeHeader = () => {
         const keyword = input.split(" ").join("+");
         navigate(`/results/${keyword}`);
     };
-
     console.log(input);
 
     return (

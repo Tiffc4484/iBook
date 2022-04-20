@@ -14,6 +14,10 @@
     min-height: 300px;
 }
 
+.ib-card-text {
+    max-width: 220px;
+}
+
 
 
 
