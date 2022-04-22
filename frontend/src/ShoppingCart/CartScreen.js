@@ -7,6 +7,7 @@ import styled from "styled-components";
 import {Add, Remove,} from "@material-ui/icons";
 import items from "../DummyData/dummyBooks.json";
 import Footer from "./Footer";
+import {useParams} from "react-router";
 
 const Wrapper = styled.div` 
  padding: 20px;
@@ -122,6 +123,8 @@ const SummaryItemPrice = styled.span``;
 
 const CartScreen = () => {
     const [books, setBooks] = useState([]);
+    const {username} = useParams()
+
 
     return (
         <div>

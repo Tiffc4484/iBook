@@ -5,13 +5,17 @@ import PropTypes from "prop-types";
 
 export default function Navigation (props) {
     const [user, setUser] = useState();
-
+    const [username, setUsername] = useState("");
     useEffect(() => {
         getUser().then((data) => {
             setUser(data.username);
             console.log(`re-render user: ${data.username}`);
+            let name = data.username.slice(0, data.username.lastIndexOf("@"))
+            setUsername(name)
+            console.log(username);
         })
     },[user]);
+
 
     async function logout() {
         const resRaw = await fetch("/users/logout");
@@ -38,7 +42,7 @@ export default function Navigation (props) {
                         <Link to="/"><span className="ms-4">Home</span></Link>
                         <span className="ms-4">About Us</span>
                         <span className="ms-4">Browse</span>
-                        <Link to="/shopping_cart">
+                        <Link to={`/${username}/shopping_cart`}>
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
                         </Link>
                         {!user? (
