@@ -9,15 +9,16 @@ import Footer from "../ShoppingCart/Footer";
 import dummyBooks from "./Discover/dummyDiscoverBooks.json";
 import Recent from "./Recent";
 
-const HomeScreen = (props) => {
+const HomeScreen = () => {
     const [isLoadingTop, setIsLoadingTop] = useState(true);
     const [isLoadingRecent, setIsLoadingRecent] = useState(true);
     const [topBooks, setTopBooks] = useState([]);
     const [recentBooks, setRecentBooks] = useState([]);
+
     useEffect(() => {
         fetchTopBooks();
         fetchRecentBooks();
-    }, []);
+    });
 
     // TODO: update this to recommended books for current user
     const discoverBooks = dummyBooks.data.books;
@@ -40,7 +41,7 @@ const HomeScreen = (props) => {
 
     return (
         <>
-            <Navigation user = {props.user}/>
+            <Navigation/>
             <HomeHeader/>
             <Discover books={discoverBooks}/>
             <TopRated books={topBooks} spinner={isLoadingTop}/>
@@ -51,5 +52,6 @@ const HomeScreen = (props) => {
         </>
     )
 }
+
 
 export default HomeScreen;

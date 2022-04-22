@@ -36,12 +36,12 @@ export default function SignUpScreen() {
         if (!evt.target.checkValidity()) {
             return evt.target.classList.add("was-validated");
         }
-        setUsername("");
-        setPassword("");
-        setPasswordConfirm("");
+        setUsername(username);
+        setPassword(password);
+        setPasswordConfirm(password);
         const hash = await password.hashCode();
-        console.log("username: " + username);
-        console.log("password: " + password);
+        // console.log("username: " + username);
+        // console.log("password: " + password);
         fetch("/auth/signup", {
             method: "POST",
             headers: {
@@ -59,7 +59,7 @@ export default function SignUpScreen() {
                     });
                 } else {
                     alert("Sign up succeed");
-                    navigate.push("/auth/login");
+                    navigate("/auth/login");
                 }
             })
             .catch((err) => {
