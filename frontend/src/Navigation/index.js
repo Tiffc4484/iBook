@@ -1,18 +1,29 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import "./Navigation.css";
 import PropTypes from "prop-types";
 
 export default function Navigation (props) {
+    const [user, setUser] = useState();
+
+    useEffect(() => {
+        getUser().then((data) => {
+            setUser(data.username);
+            console.log(`re-render user: ${data.username}`);
+        })
+    },[user]);
+
     async function logout() {
         const resRaw = await fetch("/users/logout");
         if (!resRaw.ok) {
             const res = await resRaw.text();
+            //window.location.reload(true);
             alert(res);
         }
         document.cookie = "_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
         window.location = "/";
     }
+
     return (
         <>
             <div className="d-flex justify-content-between align-items-center">
@@ -30,7 +41,7 @@ export default function Navigation (props) {
                         <Link to="/shopping_cart">
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
                         </Link>
-                        {!props.user? (
+                        {!user? (
                             <Link to="/auth/login">
                                 <button
                                 className="ms-4 btn btn-primary ib-nav-button" >
@@ -41,7 +52,7 @@ export default function Navigation (props) {
                             <div className="dropdown ms-4">
                                 <button className="btn btn-primary ib-nav-button dropdown-toggle" type="button"
                                         id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Welcome, {props.user.username}
+                                    Welcome, {user}
                                 </button>
                                 <ul className="mt-3 dropdown-menu ib-dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li>
@@ -58,6 +69,16 @@ export default function Navigation (props) {
         </>
     )
 }
+
+async function getUser() {
+    const resRaw2 = await fetch("/auth/user");
+    //console.log("getUser() function called");
+    if (resRaw2.status !== 204) {
+        //console.log("resRaw status: " + resRaw2.status);
+        return resRaw2.json();
+    } 
+}
+
 Navigation.propTypes = {
     user: PropTypes.object,
 };
