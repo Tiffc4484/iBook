@@ -2,15 +2,16 @@ const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const userModel = require('../models/shopping_cart/users-model')
 
 
-const addBookToCart = (bookId, book) => {
-    return cartModel.create(
-        //console.log(username),
-        book
-
-    )
+const addBookToCart = async (username, book) => {
+    try {
+        return await cartModel.create(book)
+    } catch (err) {
+        console.log(err);
+    }
 }
-const findAllBooksInCartForUser = () =>
-    cartModel.find()
+
+const findAllBooksInCartForUser = async () =>
+    await cartModel.find()
 
 // const findRecipe = (name) =>
 //     recipesModel.find({strMeal: name})

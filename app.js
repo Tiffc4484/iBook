@@ -51,7 +51,9 @@ app.use(
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
-app.use('/:username/cart', cartRouter)
+require('./server_node/controller/cart-controller')(app)
+
+//app.use('/:username/cart', cartRouter)
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 
@@ -71,6 +73,5 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-require('./server_node/controller/cart-controller')(app)
 
 module.exports = app;
