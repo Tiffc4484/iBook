@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import InputBox from "./InputBox.js";
 import {Link, useNavigate} from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Auth.css";
 
 export default function SignUpScreen() {
@@ -9,6 +11,8 @@ export default function SignUpScreen() {
     const [password_confirm, setPasswordConfirm] = useState("");
     const [toggle_visibility, setToggleVisibility] = useState("password");
     const navigate = useNavigate();
+
+    toast.configure();
 
     function handleEmail(evt) {
         setUsername(evt.target.value);
@@ -40,8 +44,6 @@ export default function SignUpScreen() {
         setPassword(password);
         setPasswordConfirm(password);
         const hash = await password.hashCode();
-        // console.log("username: " + username);
-        // console.log("password: " + password);
         fetch("/auth/signup", {
             method: "POST",
             headers: {
@@ -55,10 +57,10 @@ export default function SignUpScreen() {
             .then((resRaw) => {
                 if (!resRaw.ok) {
                     resRaw.text().then((res) => {
-                        alert(res);
+                        toast.info(res, {autoClose: false});
                     });
                 } else {
-                    alert("Sign up succeed");
+                    toast.success("Sign up succeed");
                     navigate("/auth/login");
                 }
             })
