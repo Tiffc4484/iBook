@@ -136,7 +136,6 @@ const Footer = () => {
                 <ContactItem>
                     <GitHub style={{marginRight: "10px"}}/> iBook
                 </ContactItem>
-                <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
             </Right>
 
 

@@ -23,7 +23,7 @@ const findUser = () =>
     }).then(response => response.json())
 
 const findAllBooksInCart = (username) => {
-    fetch(`${LOCAL_HOST}/${username}/cart`)
+    return fetch(`${LOCAL_HOST}/${username}/cart`)
         .then(response => response.json())
 }
 
