@@ -4,7 +4,7 @@ const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
 
 
 const addBookToCart = (username, book) => {
-    console.log("frontend-service" + JSON.stringify(book))
+    console.log(JSON.stringify(book))
 
     return fetch(`${LOCAL_HOST}/${username}/cart`, {
         method: 'POST',
@@ -12,7 +12,8 @@ const addBookToCart = (username, book) => {
         headers: {
             'content-type': 'application/json',
         }
-    }).then(response => response.json())
+    })
+        .then(response => response.json())
 }
 
 const findUser = () =>

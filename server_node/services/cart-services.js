@@ -2,9 +2,10 @@ const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const userModel = require('../models/shopping_cart/users-model')
 
 
-const addBookToCart = async (username, book) => {
+const addBookToCart = (username, book) => {
     try {
-        return await cartModel.create(book)
+        console.log("from service" + JSON.stringify(book))
+        return cartModel.create(book)
     } catch (err) {
         console.log(err);
     }
