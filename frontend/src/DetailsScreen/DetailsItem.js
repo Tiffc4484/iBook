@@ -1,6 +1,7 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Rating from "./Rating";
 import item from "./dummyBook.json";
+import cartService from "../ShoppingCart/service/frontend-cart-services";
 import $ from "jquery";
 
 const DetailsItem = (props) => {
@@ -15,10 +16,48 @@ const DetailsItem = (props) => {
     const publisher = props.book.publisher ? props.book.publisher : "N/A";
     const publishedDate = props.book.publishedDate ? props.book.publishedDate : "N/A";
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
+    //const bookId = currentBook.id ? currentBook.id : "N/A";
+    const [currentUser, setCurrentUser] = useState([])
+    const [currentBook, setCurrentBook] = useState({
+        bookTitle: '',
+        author: '',
+        imageURL: '',
+        bookQuantity: 0,
+        price: 0
+    })
 
     useEffect(() => {
         $("#description").html(description);
     }, []);
+
+    // get current logged user
+    useEffect(() => {
+        cartService.findUser()
+            .then(currUser => {
+                setCurrentUser(currUser)
+            })
+        //setCurrentBook(props.book ? props.book : null);
+    }, [])
+    console.log(currentUser);
+
+    const setBook =() => {
+        currentBook.bookTitle = title;
+        currentBook.author = authors;
+        currentBook.price = price;
+        currentBook.bookQuantity = 1;
+        currentBook.imageURL = imageLink;
+        setCurrentBook(currentBook)
+    }
+
+    const addToCart = () => {
+        setBook();
+        let username = currentUser.username.slice(0, currentUser.username.lastIndexOf("@"));
+        console.log("username: " + username);
+        console.log(JSON.stringify(currentBook));
+        cartService.addBookToCart(username, currentBook)
+            .then(response => response.json)
+
+    }
 
     return (
         <>
@@ -48,7 +87,12 @@ const DetailsItem = (props) => {
                         <div className="ms-2 ib-details-price">
                             $ {price}
                         </div>
-                        <button className="mt-4 btn ib-details-button hvr-push">
+                        <button
+                            onClick={() => {
+                                addToCart();
+
+                            }}
+                            className="mt-4 btn ib-details-button hvr-push">
                             Add to Cart
                         </button>
                     </div>

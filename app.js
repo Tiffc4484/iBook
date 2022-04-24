@@ -65,6 +65,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
+require('./server_node/controller/cart-controller')(app)
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 
