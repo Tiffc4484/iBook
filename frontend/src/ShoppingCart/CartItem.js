@@ -38,23 +38,23 @@ const PriceDetail = styled.div`
 const ProductAmountContainer = styled.div`
     margin: 25px;
     display: flex;
+   classname:dropdown
     align-items: center;
     margin-bottom: 20px;
 `;
 const ProductAmount = styled.div`
-    font=size: 24px;
-    margin: 5px
+    font=size: 15px;
+    margin: 15px;
+    font-weight: 200
 `;
 const ProductPrice = styled.div`
     font-size: 20px;
     font-weight: 200;
+    margin: 15px;
 `;
 
 const CartItems = (props) => {
-    console.log(JSON.stringify(props.book))
-    console.log(JSON.stringify(props.book.bookTitle))
     const title = props.book.bookTitle ? props.book.bookTitle : "No Title";
-    console.log(title);
 
     return (
         <Product>
@@ -68,11 +68,18 @@ const CartItems = (props) => {
             </ProductDetail>
             <PriceDetail>
                 <ProductAmountContainer>
-                    <Add/>
-                    <ProductAmount>{props.book.bookQuantity}</ProductAmount>
-                    <Remove/>
+                        <button className="btn btn-#141619 dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            {props.book.bookQuantity}
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a className="dropdown-item" href="#">0</a></li>
+                            <li><a className="dropdown-item" href="#">1</a></li>
+                            <li><a className="dropdown-item" href="#">2</a></li>
+                        </ul>
+                    <ProductAmount>$ {props.book.price}</ProductAmount>
                 </ProductAmountContainer>
-                <ProductPrice>$ {props.book.price}</ProductPrice>
+                <ProductPrice></ProductPrice>
             </PriceDetail>
         </Product>
     )
