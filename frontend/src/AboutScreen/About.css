@@ -1,0 +1,68 @@
+
+.ib-about-header-img {
+    max-width: 500px;
+}
+
+.ib-about-header {
+    font-size: 60px;
+    font-weight: bold;
+    color: #4A8CE1;
+}
+
+.ib-about-subheader {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #4A8CE1;
+    position: relative;
+}
+
+.ib-about-subheader:before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #191970;
+    left: -200px;
+    top: 50%;
+    position: absolute;
+}
+
+.ib-about-subheader:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #191970;
+    right: -200px;
+    top: 50%;
+    position: absolute;
+}
+
+.ib-about-text {
+    font-size: 20px;
+
+}
+
+.ib-about-container {
+    width: 1200px;
+    background-color: rgb(189, 215, 249, 0.3);
+    border: #BDD7F9 1px solid;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ib-about-container-1 {
+    width: 1200px;
+}
+
+.ib-about-team-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.ib-about-team-title {
+    font-size: 20px;
+    font-weight: bold;
+}

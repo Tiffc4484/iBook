@@ -36,7 +36,9 @@ export default function Navigation (props) {
                 <div className="m-3">
                     <div className="d-flex align-items-center">
                         <Link to="/"><span className="ms-4">Home</span></Link>
-                        <span className="ms-4">About Us</span>
+                        <Link to="/about">
+                            <span className="ms-4">About Us</span>
+                        </Link>
                         <Link to="/browse">
                             <span className="ms-4">Browse</span>
                         </Link>
