@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import cartService from "../ShoppingCart/service/frontend-cart-services";
-import items from "../DummyData/dummyBooks.json";
 import {Add, Remove} from "@material-ui/icons";
 import React from "react";
-import $ from "jquery";
-
 
 const Image = styled.img`
     width: 200px;
     height: 300px;
+    padding: 20px
 `;
 
 const Product = styled.div`
