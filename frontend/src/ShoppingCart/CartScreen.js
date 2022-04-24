@@ -52,7 +52,6 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
-
 `;
 
 
@@ -74,6 +73,7 @@ const Details = styled.div`
 `;
 const ProductName = styled.span`
     padding: 10px;`;
+
 const PriceDetail = styled.div`
     flex: 1;
     display:flex;
@@ -151,7 +151,6 @@ const CartScreen = () => {
 
                 <Bottom>
                     <Info>
-                        <Product>
                             {
                                 books && books.map((book) => <CartItems book={book}/>
 
@@ -170,7 +169,6 @@ const CartScreen = () => {
                             {/*    </ProductAmountContainer>*/}
                             {/*    <ProductPrice>$ {items[0].saleInfo.listPrice.amount}</ProductPrice>*/}
                             {/*</PriceDetail>*/}
-                        </Product>
                     </Info>
                     <Summary>
                         <SummaryTitle>ORDER SUMMARY</SummaryTitle>

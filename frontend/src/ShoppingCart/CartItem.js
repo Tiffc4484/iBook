@@ -11,6 +11,11 @@ const Image = styled.img`
     height: 300px;
 `;
 
+const Product = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
 const Details = styled.div`
     padding: 20px;
     display: flex;
@@ -54,7 +59,7 @@ const CartItems = (props) => {
     console.log(title);
 
     return (
-        <>
+        <Product>
             <ProductDetail>
                 <Image src={props.book.imageURL}/>
                 <Details>
@@ -71,7 +76,7 @@ const CartItems = (props) => {
                 </ProductAmountContainer>
                 <ProductPrice>$ {props.book.price}</ProductPrice>
             </PriceDetail>
-        </>
+        </Product>
     )
 }
 
