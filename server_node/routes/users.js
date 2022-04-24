@@ -11,7 +11,7 @@ router.get("/logout", async (req, res) => {
     if (err) {
       console.log("Error", err);
     }
-    console.log(req.session);
+    console.log("log out......");
   });
   res.sendStatus(200);
 });

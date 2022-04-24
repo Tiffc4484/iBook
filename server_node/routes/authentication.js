@@ -11,18 +11,20 @@ router.post("/login", async (req, res) => {
     }
     try {
         const user = await userModel.findOne({username});
+        console.log("login find user: " + user);
         if (!user) {
             req.session.error = "Invalid Credentials";
-            res.sendStatus(400).send("Account does not exist");
+
+            return res.status(400).send("This account does not exist");;
         }
         const match = await bcrypt.compare(password, user.password);
         if (!match) {
-            res.status(400).send("Username and password do not match, please try again");
+            return res.status(400).send("Username and password do not match, please try again");;
         }
         req.session.isAuth = true;
         req.session.username = user.username;
-        console.log("req.session.isAuth? " + req.session.isAuth);
-        console.log("req.session.username? " + req.session.username);
+        //console.log("req.session.isAuth? " + req.session.isAuth);
+        //console.log("req.session.username? " + req.session.username);
         res.redirect("/");
     } catch (err) {
         console.log(err);
@@ -43,9 +45,9 @@ router.post("/signup", async (req, res) => {
     }
     try {
         let user = await userModel.findOne({username});
-        console.log(user);
+        console.log("sign up find user: " + user);
         if (user) {
-            return res.redirect('/');
+            return res.status(400).send("This username has been registered");
         }
         const hash = await bcrypt.hash(password, 10);
         user = new userModel({

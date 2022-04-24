@@ -1,12 +1,16 @@
 import React, {useState} from "react";
 import InputBox from "./InputBox.js";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Auth.css";
 
 const LoginScreen = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    const navigate = useNavigate();
+    toast.configure();
     function handleUsername(evt) {
         setUsername(evt.target.value);
     }
@@ -22,8 +26,6 @@ const LoginScreen = (props) => {
         }
         setUsername(username);
         setPassword(password);
-        console.log("username: " + username);
-        console.log("password: " + password);
         const hash = await password.hashCode();
         const checked = document.querySelector(".form-check-input").checked;
         const data = {
@@ -41,11 +43,11 @@ const LoginScreen = (props) => {
             .then((resRaw) => {
                 if (!resRaw.ok) {
                     resRaw.text().then((res) => {
-                        alert(res);
+                        toast.error(res);
                     });
                 } else {
-                    alert("Log in succeed");
-                    window.location = "/";
+                    toast.success("Log in succeed");
+                    navigate("/");
                 }
             })
             .catch((err) => {

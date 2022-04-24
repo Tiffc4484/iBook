@@ -16,7 +16,6 @@ export default function Navigation (props) {
         })
     },[user]);
 
-
     async function logout() {
         const resRaw = await fetch("/users/logout");
         if (!resRaw.ok) {
@@ -41,7 +40,9 @@ export default function Navigation (props) {
                     <div className="d-flex align-items-center">
                         <Link to="/"><span className="ms-4">Home</span></Link>
                         <span className="ms-4">About Us</span>
-                        <span className="ms-4">Browse</span>
+                        <Link to="/browse">
+                            <span className="ms-4">Browse</span>
+                        </Link>
                         <Link to={`/${username}/shopping_cart`}>
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
                         </Link>
