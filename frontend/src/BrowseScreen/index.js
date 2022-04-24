@@ -94,7 +94,7 @@ const BrowseScreen = () => {
 
             <div className="mt-5">
                 <div className="d-flex justify-content-center">
-                    {isLoadingEdu ? <LoadingSpinner/> : ""}
+                    {isLoadingTop ? <LoadingSpinner/> : ""}
                 </div>
                 <div className="d-none d-lg-block">
                     <div className="d-flex justify-content-center align-items-center">
