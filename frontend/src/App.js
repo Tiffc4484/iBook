@@ -12,19 +12,12 @@ import {useEffect, useState} from "react";
 
 
 function App() {
-    const [user, setUser] = useState();
-    const [flag, refreshPage] = useState(true);
-    useEffect(() => {
-        getUser().then((user) => {
-            setUser(user);
-            console.log(`re-render user: ${user.username}`);
-        });
-    }, [flag]);
+  
   return (
     <div className="container-fluid">
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomeScreen user = {user} />}></Route>
+                <Route path="/" element={<HomeScreen/>}></Route>
                 <Route path="/results/:keyword" element={<ResultsScreen/>}></Route>
                 <Route path="/details/:id" element={<DetailsScreen/>}></Route>
                 <Route path ="/browse" element={<BrowseScreen/>}></Route>
@@ -37,11 +30,6 @@ function App() {
   );
 }
 
-async function getUser() {
-  const resRaw = await fetch("/auth/user");
-  if (resRaw.status !== 204) {
-    return await resRaw.json();
-  }
-}
+
 
 export default App;
