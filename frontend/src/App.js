@@ -8,8 +8,7 @@ import LoginScreen from "./Authentication/LoginScreen";
 import SignUpScreen from "./Authentication/SignUpScreen";
 import CartScreen from "./ShoppingCart/CartScreen";
 import BrowseScreen from './BrowseScreen';
-import {useEffect, useState} from "react";
-
+import AboutScreen from "./AboutScreen";
 
 function App() {
   
@@ -21,6 +20,7 @@ function App() {
                 <Route path="/results/:keyword" element={<ResultsScreen/>}></Route>
                 <Route path="/details/:id" element={<DetailsScreen/>}></Route>
                 <Route path ="/browse" element={<BrowseScreen/>}></Route>
+                <Route path="/about" element={<AboutScreen/>}></Route>
                 <Route exact path="/auth/login" element={<LoginScreen/>}></Route>
                 <Route exact path="/auth/signup" element={<SignUpScreen/>}></Route>
                 <Route exact path="/shopping_cart" element={<CartScreen/>}></Route>
