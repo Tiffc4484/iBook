@@ -125,20 +125,31 @@ const CartScreen = () => {
     const [books, setBooks] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const {username} = useParams()
+    const [copies, setCopies] = useState(0);
 
     useEffect(() => {
-        let booksInCart = cartService.findAllBooksInCart(username)
-            .then(response => setBooks(response))
-        console.log("use effect in screen" + JSON.stringify(booksInCart));
-        calculateTotalPrice()
-        // booksInCart.map((book) =>setTotalPrice(totalPrice + book.price)
-        // )
-    }, [username])
+         let booksInCart = cartService.findAllBooksInCart(username)
+            .then(response => {
+                setBooks(response)
+                calculateTotalPrice(response)
+            })
+        console.log("use effect in screen" + totalPrice);
+    }, [books.length])
 
-    const calculateTotalPrice = () => {
+
+    const calculateTotalPrice = (booksInCart) => {
         let price = 0;
-        books && books.map((book) => price += book.price)
-        setTotalPrice(price)
+        let copy = 0;
+        {
+            booksInCart && booksInCart.map((b) => {
+                price += (b.price * b.bookQuantity)
+                copy += b.bookQuantity
+                console.log(price)
+                price = Math.round(price*100)/100
+                setTotalPrice(price)
+                setCopies(copy)
+            })
+        }
     }
 
     return (
@@ -150,7 +161,7 @@ const CartScreen = () => {
                     <TopButton>
                         <Link to='/'>Continue Shopping</Link></TopButton>
                     <div>
-                        <TopText>Shopping Cart(2)</TopText>
+                        <TopText>Shopping Cart({books.length})</TopText>
                         <TopText>Wish List(1)</TopText>
                     </div>
                     <TopButton type="filled">Check Out Now! </TopButton>
@@ -159,9 +170,10 @@ const CartScreen = () => {
                 <Bottom>
                     <Info>
                             {
-                                books && books.map((book) => <CartItems book={book}/>
-
+                                books && books.map((book) =>
+                                        <CartItems username={username} book={book} copy = {copies}/>
                                 )}
+
                             {/*    <Image src={items[0].volumeInfo.imageLinks.small}></Image>*/}
                             {/*    <Details>*/}
                             {/*        <ProductName><b>Name: </b>The Google Story</ProductName>*/}

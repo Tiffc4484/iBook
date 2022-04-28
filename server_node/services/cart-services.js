@@ -11,6 +11,10 @@ const addBookToCart = (username, book) => {
     }
 }
 
+const updateBookQuantity = (username, book) => {
+    return cartModel.updateOne({username: username}, {$set: book})
+}
+
 const findAllBooksInCartForUser = async () =>
     await cartModel.find()
 
@@ -28,5 +32,6 @@ const deleteBook = (name, book) =>
 
 module.exports = {
     addBookToCart,
+    updateBookQuantity,
     findAllBooksInCartForUser
 }

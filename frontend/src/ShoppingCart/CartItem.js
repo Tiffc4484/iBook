@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import cartService from "../ShoppingCart/service/frontend-cart-services";
 import {Add, Delete, Remove} from "@material-ui/icons";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import userEvent from "@testing-library/user-event";
 
 const Image = styled.img`
     width: 200px;
@@ -54,6 +55,7 @@ const ProductPrice = styled.div`
 
 const CartItems = (props) => {
     const title = props.book.bookTitle ? props.book.bookTitle : "No Title";
+    useEffect(() => {}, [props.book.bookQuantity])
 
     return (
         <Product>
@@ -67,17 +69,28 @@ const CartItems = (props) => {
             </ProductDetail>
             <PriceDetail>
                 <ProductAmountContainer>
-                    <Add/>
+                    <Add onClick={() => {
+                        console.log("item page" + props.username)
+                        props.book.bookQuantity += 1;
+                        cartService.updateBookQuantity(props.username, props.book).then(r => r.json)
+                    }}/>
                     <ProductAmount>
                         {props.book.bookQuantity}
                     </ProductAmount>
-                    <Remove/>
-                    <Delete/>
+                    <Remove onClick={() => {
+                        console.log("item page" + props.username)
+                        props.book.bookQuantity -= 1;
+                        cartService.updateBookQuantity(props.username, props.book).then(r => r.json)
+                    }}/>
                 </ProductAmountContainer>
                 <ProductPrice>$ {props.book.price}</ProductPrice>
             </PriceDetail>
         </Product>
     )
+}
+
+function add(book) {
+    book.bookQuantity++;
 }
 
 export  default CartItems;
