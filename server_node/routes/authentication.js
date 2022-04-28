@@ -55,6 +55,7 @@ router.post("/signup", async (req, res) => {
             password: hash,
         });
         await user.save();
+        return res.status(200).send("Sign up succeed!");
     } catch (err) {
         console.log(err);
         res.sendStatus(400);
