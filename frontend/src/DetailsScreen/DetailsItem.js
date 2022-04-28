@@ -33,12 +33,24 @@ const DetailsItem = (props) => {
 
     // get current logged user
     useEffect(() => {
-        cartService.findUser()
-            .then(currUser => {
-                setCurrentUser(currUser)
-            })
+        getUser().then((user) => {
+            setCurrentUser(user);
+        })
+        // cartService.findUser()
+        //     .then(currUser => {
+        //         setCurrentUser(currUser)
+        //     })
         //setCurrentBook(props.book ? props.book : null);
     }, [currentUser])
+
+    async function getUser() {
+        const resRaw2 = await fetch("/auth/user");
+        //console.log("getUser() function called");
+        if (resRaw2.status !== 204) {
+            //console.log("resRaw status: " + resRaw2.status);
+            return resRaw2.json();
+        }
+    }
 
     const setBook = () => {
         currentBook.bookTitle = title;

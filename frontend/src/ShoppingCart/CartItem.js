@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import cartService from "../ShoppingCart/service/frontend-cart-services";
-import {Add, Remove} from "@material-ui/icons";
+import {Add, Delete, Remove} from "@material-ui/icons";
 import React from "react";
 
 const Image = styled.img`
@@ -38,13 +38,12 @@ const PriceDetail = styled.div`
 const ProductAmountContainer = styled.div`
     margin: 25px;
     display: flex;
-   classname:dropdown
+    classname:dropdown
     align-items: center;
     margin-bottom: 20px;
 `;
 const ProductAmount = styled.div`
-    font=size: 15px;
-    margin: 15px;
+    font-size: 20px;
     font-weight: 200
 `;
 const ProductPrice = styled.div`
@@ -68,18 +67,14 @@ const CartItems = (props) => {
             </ProductDetail>
             <PriceDetail>
                 <ProductAmountContainer>
-                        <button className="btn btn-#141619 dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            {props.book.bookQuantity}
-                        </button>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a className="dropdown-item" href="#">0</a></li>
-                            <li><a className="dropdown-item" href="#">1</a></li>
-                            <li><a className="dropdown-item" href="#">2</a></li>
-                        </ul>
-                    <ProductAmount>$ {props.book.price}</ProductAmount>
+                    <Add/>
+                    <ProductAmount>
+                        {props.book.bookQuantity}
+                    </ProductAmount>
+                    <Remove/>
+                    <Delete/>
                 </ProductAmountContainer>
-                <ProductPrice></ProductPrice>
+                <ProductPrice>$ {props.book.price}</ProductPrice>
             </PriceDetail>
         </Product>
     )
