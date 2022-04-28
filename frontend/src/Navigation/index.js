@@ -45,9 +45,9 @@ export default function Navigation (props) {
                         <Link to="/browse">
                             <span className="ms-4">Browse</span>
                         </Link>
-                        <Link to={`/${username}/shopping_cart`}>
+                        {user && <Link to={`/${username}/shopping_cart`}>
                             <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
-                        </Link>
+                        </Link>}
                         {!user? (
                             <Link to="/auth/login">
                                 <button

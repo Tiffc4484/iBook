@@ -130,9 +130,16 @@ const CartScreen = () => {
         let booksInCart = cartService.findAllBooksInCart(username)
             .then(response => setBooks(response))
         console.log("use effect in screen" + JSON.stringify(booksInCart));
+        calculateTotalPrice()
         // booksInCart.map((book) =>setTotalPrice(totalPrice + book.price)
         // )
     }, [username])
+
+    const calculateTotalPrice = () => {
+        let price = 0;
+        books && books.map((book) => price += book.price)
+        setTotalPrice(price)
+    }
 
     return (
         <div>
@@ -174,19 +181,19 @@ const CartScreen = () => {
                         <SummaryTitle>ORDER SUMMARY</SummaryTitle>
                     <SummaryItem>
                         <SummaryItemText>Subtotal</SummaryItemText>
-                        <SummaryItemPrice>{totalPrice}</SummaryItemPrice>
+                        <SummaryItemPrice>$ {totalPrice}</SummaryItemPrice>
                     </SummaryItem>
                     <SummaryItem>
                         <SummaryItemText>Estimated Shipping</SummaryItemText>
                         <SummaryItemPrice>$ 5.90</SummaryItemPrice>
                     </SummaryItem>
                     <SummaryItem>
-                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemText>Shipping Discount </SummaryItemText>
                         <SummaryItemPrice>$ -5.90</SummaryItemPrice>
                     </SummaryItem>
                     <SummaryItem type="total">
                         <SummaryItemText>Total</SummaryItemText>
-                        <SummaryItemPrice>$ 11.99</SummaryItemPrice>
+                        <SummaryItemPrice>$ {totalPrice}</SummaryItemPrice>
                     </SummaryItem>
                     </Summary>
                 </Bottom>

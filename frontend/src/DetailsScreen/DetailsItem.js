@@ -3,6 +3,7 @@ import Rating from "./Rating";
 import item from "./dummyBook.json";
 import cartService from "../ShoppingCart/service/frontend-cart-services";
 import $ from "jquery";
+import Link from "@material-ui/core/Link";
 
 const DetailsItem = (props) => {
     const title = props.book.title ? props.book.title : "No Title";
@@ -37,10 +38,9 @@ const DetailsItem = (props) => {
                 setCurrentUser(currUser)
             })
         //setCurrentBook(props.book ? props.book : null);
-    }, [])
-    console.log(currentUser);
+    }, [currentUser])
 
-    const setBook =() => {
+    const setBook = () => {
         currentBook.bookTitle = title;
         currentBook.author = authors;
         currentBook.price = price;
@@ -87,14 +87,18 @@ const DetailsItem = (props) => {
                         <div className="ms-2 ib-details-price">
                             $ {price}
                         </div>
-                        <button
-                            onClick={() => {
-                                addToCart();
-
-                            }}
-                            className="mt-4 btn ib-details-button hvr-push">
-                            Add to Cart
-                        </button>
+                        {
+                            currentUser ? (
+                                <button onClick={() => {addToCart();}}
+                                    className="mt-4 btn ib-details-button hvr-push">
+                                    Add to Cart
+                                </button>) : (
+                                    <Link to="/auth/signup">
+                                        <button
+                                            className="mt-4 btn ib-details-button hvr-push">
+                                            Join us!
+                                        </button>
+                                    </Link>)}
                     </div>
 
                 </div>
