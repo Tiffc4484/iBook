@@ -25,9 +25,14 @@ const DetailsScreen = () => {
                     <div className="d-flex justify-content-center">
                         <button
                             onClick={() => navigate(-1)}
-                            className="btn ib-details-button ms-3 w-50 hvr-icon-back">
+                            className="btn ib-details-button ms-3 w-50 hvr-icon-back d-none d-lg-block">
                             <i className="fa fa-arrow-left me-2 hvr-icon"></i>
                             Back
+                        </button>
+                        <button
+                            onClick={() => navigate(-1)}
+                            className="btn ib-details-button-round rounded-circle ms-3 hvr-icon-back d-block d-lg-none">
+                            <i className="fa fa-arrow-left hvr-icon"></i>
                         </button>
                     </div>
                 </div>

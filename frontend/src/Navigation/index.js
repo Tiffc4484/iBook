@@ -38,15 +38,31 @@ export default function Navigation (props) {
 
                 <div className="m-3">
                     <div className="d-flex align-items-center">
-                        <Link to="/"><span className="ms-4">Home</span></Link>
+                        <Link to="/">
+                            <span className="ms-4 d-none d-lg-block">Home</span>
+                        </Link>
+                        <Link to="/">
+                            <i className="fa fa-home fa-2x ms-4 d-block d-lg-none"></i>
+                        </Link>
+
                         <Link to="/about">
-                            <span className="ms-4">About Us</span>
+                            <span className="ms-4 d-none d-lg-block">About Us</span>
+                        </Link>
+                        <Link to="/about">
+                            <i className="fa fa-question-circle fa-2x ms-4 d-block d-lg-none"></i>
+                        </Link>
+
+                        <Link to="/browse">
+                            <span className="ms-4 d-none d-lg-block">Browse</span>
                         </Link>
                         <Link to="/browse">
-                            <span className="ms-4">Browse</span>
+                            <i className="fa fa-search fa-2x ms-4 d-block d-lg-none"></i>
                         </Link>
+
+
                         {user && <Link to={`/${username}/shopping_cart`}>
-                            <span className="ms-4"><i className="fa fa-shopping-cart"></i> My Cart</span>
+                            <span className="ms-4 d-none d-lg-block"><i className="fa fa-shopping-cart"></i> My Cart</span>
+                            <i className="fa fa-shopping-cart fa-2x ms-4 d-block d-lg-none"></i>
                         </Link>}
                         {!user? (
                             <Link to="/auth/login">
