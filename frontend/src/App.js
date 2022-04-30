@@ -9,9 +9,8 @@ import SignUpScreen from "./Authentication/SignUpScreen";
 import CartScreen from "./ShoppingCart/CartScreen";
 import BrowseScreen from './BrowseScreen';
 import AboutScreen from "./AboutScreen";
-
 function App() {
-  
+
   return (
     <div className="container-fluid">
         <BrowserRouter>
@@ -23,7 +22,7 @@ function App() {
                 <Route path="/about" element={<AboutScreen/>}></Route>
                 <Route exact path="/auth/login" element={<LoginScreen/>}></Route>
                 <Route exact path="/auth/signup" element={<SignUpScreen/>}></Route>
-                <Route exact path="/:username/shopping_cart" element={<CartScreen/>}></Route>
+                <Route path=":username/shopping_cart" element={<CartScreen/>}></Route>
             </Routes>
         </BrowserRouter>
       </div>

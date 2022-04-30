@@ -34,12 +34,13 @@ router.post('/:username/shopping_cart', async (req, res) => {
 router.get('/:username/shopping_cart', async (req, res) => {
     try{
         const username = req.params.username;
-        let allBooks = await cartModel.find({username: username});
-        console.log("get cart: " + allBooks);
+        let allBooks = await cartModel.find({"username": username},{"cart": 1, "_id": 0});
+
+        console.log("get /:username/shopping_cart: " + allBooks);
         return res.status(200).json({
             status: true,
             data: allBooks,
-            })
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json({

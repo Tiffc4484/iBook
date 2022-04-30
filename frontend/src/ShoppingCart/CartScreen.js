@@ -128,15 +128,21 @@ const CartScreen = () => {
     const [copies, setCopies] = useState(0);
 
     useEffect(() => {
-         let booksInCart = cartService.findAllBooksInCart(username)
-            .then(response => {
-                setBooks(response)
-                calculateTotalPrice(response)
+        fetch(`/${username}/shopping_cart`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+                return response.json();
             })
-        console.log("use effect in screen" + totalPrice);
-    }, [books.length])
-
-
+            .then((res) => {
+                setBooks(res.data[0].cart);
+                console.log(books);
+            })
+    },[books.length]);
+    
     const calculateTotalPrice = (booksInCart) => {
         let price = 0;
         let copy = 0;
@@ -152,6 +158,7 @@ const CartScreen = () => {
         }
     }
 
+    let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copy = {copies}/>);
     return (
         <div>
             <Navigation/>
@@ -169,11 +176,7 @@ const CartScreen = () => {
 
                 <Bottom>
                     <Info>
-                            {
-                                books && books.map((book) =>
-                                        <CartItems username={username} book={book} copy = {copies}/>
-                                )}
-
+                        <ul>{cartItems}</ul>
                             {/*    <Image src={items[0].volumeInfo.imageLinks.small}></Image>*/}
                             {/*    <Details>*/}
                             {/*        <ProductName><b>Name: </b>The Google Story</ProductName>*/}
