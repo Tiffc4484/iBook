@@ -18,9 +18,7 @@ router.post('/:username/shopping_cart', async (req, res) => {
             price,
         };
         let addBook = new bookModel({...book});
-        console.log("Post book to cart: " + JSON.stringify(addBook))
         await cartModel.findOneAndUpdate({username: username}, {$addToSet: {cart: addBook}}).exec();
-
         return res.status(200).send("update cart successfully");
     } catch (err) {
         console.log(err);
@@ -35,8 +33,6 @@ router.get('/:username/shopping_cart', async (req, res) => {
     try{
         const username = req.params.username;
         let allBooks = await cartModel.find({"username": username},{"cart": 1, "_id": 0});
-
-        console.log("get /:username/shopping_cart: " + allBooks);
         return res.status(200).json({
             status: true,
             data: allBooks,
@@ -59,7 +55,5 @@ router.get('/:username/shopping_cart', async (req, res) => {
 //     }
 //
 // })
-
-
 
 module.exports = router;
