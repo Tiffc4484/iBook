@@ -93,4 +93,4 @@ function add(book) {
     book.bookQuantity++;
 }
 
-export  default CartItems;
+export default CartItems;

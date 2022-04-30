@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const router = express.Router();
 const userModel = require("../models/users/users-schema");
+const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const bcrypt = require("bcrypt");
 
 router.post("/login", async (req, res) => {
@@ -54,7 +55,14 @@ router.post("/signup", async (req, res) => {
             username,
             password: hash,
         });
+        let cartUser = username.slice(0, username.lastIndexOf("@"));
+        console.log("cartUser: " + cartUser);
+        cart = new cartModel({
+            username: cartUser,
+            cart:[],
+        });
         await user.save();
+        await cart.save();
         return res.status(200).send("Sign up succeed!");
     } catch (err) {
         console.log(err);

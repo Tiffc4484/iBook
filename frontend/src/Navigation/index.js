@@ -20,7 +20,6 @@ export default function Navigation (props) {
         const resRaw = await fetch("/users/logout");
         if (!resRaw.ok) {
             const res = await resRaw.text();
-            //window.location.reload(true);
             alert(res);
         }
         document.cookie = "_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -59,8 +58,7 @@ export default function Navigation (props) {
                             <i className="fa fa-search fa-2x ms-4 d-block d-lg-none"></i>
                         </Link>
 
-
-                        {user && <Link to={`/${username}/shopping_cart`}>
+                        {username && <Link to={`/${username}/shopping_cart`}>
                             <span className="ms-4 d-none d-lg-block"><i className="fa fa-shopping-cart"></i> My Cart</span>
                             <i className="fa fa-shopping-cart fa-2x ms-4 d-block d-lg-none"></i>
                         </Link>}
@@ -95,9 +93,7 @@ export default function Navigation (props) {
 
 async function getUser() {
     const resRaw2 = await fetch("/auth/user");
-    //console.log("getUser() function called");
     if (resRaw2.status !== 204) {
-        //console.log("resRaw status: " + resRaw2.status);
         return resRaw2.json();
     } 
 }

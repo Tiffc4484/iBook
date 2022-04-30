@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Rating from "./Rating";
+import { toast } from "react-toastify";
+import { useParams } from "react-router-dom";
 import item from "./dummyBook.json";
 import cartService from "../ShoppingCart/service/frontend-cart-services";
 import $ from "jquery";
@@ -18,7 +20,6 @@ const DetailsItem = (props) => {
     const publishedDate = props.book.publishedDate ? props.book.publishedDate : "N/A";
     const pageCount = props.book.pageCount ? props.book.pageCount : "N/A";
     //const bookId = currentBook.id ? currentBook.id : "N/A";
-    const [currentUser, setCurrentUser] = useState([])
     const [currentBook, setCurrentBook] = useState({
         bookTitle: '',
         author: '',
@@ -26,28 +27,24 @@ const DetailsItem = (props) => {
         bookQuantity: 0,
         price: 0
     })
-
+    const [user, setUser] = useState("");
     useEffect(() => {
-        $("#description").html(description);
-    }, []);
-
-    // get current logged user
-    useEffect(() => {
-        getUser().then((user) => {
-            setCurrentUser(user);
+        getUser().then((data) => {
+            setUser(data.username);
+            console.log(`re-render user in DetailItem: ${data.username}`);
+            //let name = data.username.slice(0, data.username.lastIndexOf("@"));
+            console.log("current user: " + user);
         })
-        // cartService.findUser()
-        //     .then(currUser => {
-        //         setCurrentUser(currUser)
-        //     })
-        //setCurrentBook(props.book ? props.book : null);
-    }, [currentUser])
+    },[user]);
 
+    toast.configure();
+    // useEffect(() => {
+    //     $("#description").html(description);
+    // }, []);
+    
     async function getUser() {
         const resRaw2 = await fetch("/auth/user");
-        //console.log("getUser() function called");
         if (resRaw2.status !== 204) {
-            //console.log("resRaw status: " + resRaw2.status);
             return resRaw2.json();
         }
     }
@@ -61,14 +58,32 @@ const DetailsItem = (props) => {
         setCurrentBook(currentBook)
     }
 
-    const addToCart = () => {
+    function addToCart(evt) {
+        evt.preventDefault();
         setBook();
-        let username = currentUser.username.slice(0, currentUser.username.lastIndexOf("@"));
+        let username = user.slice(0, user.lastIndexOf("@"));
         console.log("username: " + username);
-        console.log(JSON.stringify(currentBook));
-        cartService.addBookToCart(username, currentBook)
-            .then(response => response.json)
-
+        console.log("current book: " + JSON.stringify(currentBook));
+        //cartService.addBookToCart(username, currentBook);
+        fetch(`/${username}/shopping_cart`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({...currentBook}),
+        })
+            .then((resRaw) => {
+                if (!resRaw.ok) {
+                    resRaw.text().then((res) => {
+                        toast.info(res);
+                    });
+                } else {
+                    toast.success("added to the cart");
+                }}
+            )
+            .catch ((err) => {
+                alert(err);
+             });
     }
 
     return (
@@ -100,8 +115,8 @@ const DetailsItem = (props) => {
                             $ {price}
                         </div>
                         {
-                            currentUser ? (
-                                <button onClick={() => {addToCart();}}
+                            user ? (
+                                <button onClick={addToCart}
                                     className="mt-4 btn ib-details-button hvr-push">
                                     Add to Cart
                                 </button>) : (

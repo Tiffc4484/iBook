@@ -6,7 +6,7 @@ const BOOKS_API = "https://ibook5500.herokuapp.com/api/books";
 const addBookToCart = (username, book) => {
     console.log(JSON.stringify(book))
 
-    return fetch(`${USER_CART}/${username}/cart`, {
+    fetch(`/${username}/shopping_cart`, {
         method: 'POST',
         body: JSON.stringify(book),
         headers: {
@@ -17,7 +17,7 @@ const addBookToCart = (username, book) => {
 }
 
 const updateBookQuantity = (username, book) =>
-    fetch(`${USER_CART}/${username}/cart`, {
+    fetch(`${USER_CART}/${username}/shopping_cart`, {
         method: 'PUT',
         body: JSON.stringify(book),
         headers: {
@@ -38,7 +38,7 @@ const findUser = () =>
     }).then(response => response.json())
 
 const findAllBooksInCart = (username) => {
-    return fetch(`${USER_CART}/${username}/cart`)
+    fetch(`${USER_CART}/${username}/shopping_cart`)
         .then(response => response.json())
 }
 
