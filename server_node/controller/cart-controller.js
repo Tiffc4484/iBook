@@ -8,7 +8,6 @@ const bookModel = require('../models/shopping_cart/book-model');
 router.post('/:username/shopping_cart', async (req, res) => {
     const {bookTitle, author, price, bookQuantity, imageURL} = req.body;
     const username = req.params.username;
-    console.log("username in post /:username/shopping_cart, " + username);
     try {
         let book = {
             bookTitle,
@@ -46,11 +45,20 @@ router.get('/:username/shopping_cart', async (req, res) => {
     }
 });
 
-router.put('/:username/cart', async (req, res) => {
+router.put('/:username/shopping_cart', async (req, res) => {
     try {
-
-    } catch (error) {
-        console.error(error)
+        const username = req.params.username;
+        const {bookTitle, bookQuantity} = req.body;
+        await cartModel.findOneAndUpdate({username: username, "cart.bookTitle": bookTitle}, {$set: {"cart.$.bookQuantity": bookQuantity}});
+        res.status(200).json({
+            status: true,
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({
+            error: err,
+            status: false,
+        });
     }
 
 })

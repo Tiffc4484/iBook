@@ -143,13 +143,13 @@ const CartScreen = () => {
                 let copy = 0;
                 if (books.length > 0) {
                     books.map((b) => {
-                        price += (b.price * b.bookQuantity)
-                        copy += b.bookQuantity
-                        console.log(price)
-                        price = Math.round(price*100)/100
-                        setTotalPrice(price)
-                        setCopies(copy)
-                    })
+                        price += (b.price * b.bookQuantity);
+                        copy += b.bookQuantity;
+                        console.log(price);
+                        price = Math.round(price*100)/100;
+                        setTotalPrice(price);
+                        setCopies(copy);
+                    });
                 }
             })
     },[books.length]);
