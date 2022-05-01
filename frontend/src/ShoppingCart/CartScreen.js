@@ -139,24 +139,21 @@ const CartScreen = () => {
             })
             .then((res) => {
                 setBooks(res.data[0].cart);
-                console.log(books);
+                let price = 0;
+                let copy = 0;
+                if (books.length > 0) {
+                    books.map((b) => {
+                        price += (b.price * b.bookQuantity)
+                        copy += b.bookQuantity
+                        console.log(price)
+                        price = Math.round(price*100)/100
+                        setTotalPrice(price)
+                        setCopies(copy)
+                    })
+                }
             })
     },[books.length]);
-    
-    const calculateTotalPrice = (booksInCart) => {
-        let price = 0;
-        let copy = 0;
-        {
-            booksInCart && booksInCart.map((b) => {
-                price += (b.price * b.bookQuantity)
-                copy += b.bookQuantity
-                console.log(price)
-                price = Math.round(price*100)/100
-                setTotalPrice(price)
-                setCopies(copy)
-            })
-        }
-    }
+
 
     let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copy = {copies}/>);
     return (

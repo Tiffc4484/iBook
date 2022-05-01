@@ -46,14 +46,13 @@ router.get('/:username/shopping_cart', async (req, res) => {
     }
 });
 
-// app.put('/:username/cart', async (req, res) => {
-//     try {
-//         cartServices.updateBookQuantity(req.params.username, req.body)
-//             .then(book=>res.send(book))
-//     } catch (error) {
-//         console.error(error)
-//     }
-//
-// })
+router.put('/:username/cart', async (req, res) => {
+    try {
+
+    } catch (error) {
+        console.error(error)
+    }
+
+})
 
 module.exports = router;

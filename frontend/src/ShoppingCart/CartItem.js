@@ -55,7 +55,18 @@ const ProductPrice = styled.div`
 
 const CartItems = (props) => {
     const title = props.book.bookTitle ? props.book.bookTitle : "No Title";
-    useEffect(() => {}, [props.book.bookQuantity])
+    useEffect(() => {
+        fetch(`/${props.username}/shopping_cart`, {
+            method: 'PUT',
+            body: JSON.stringify(props.book),
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then((response) =>
+                response.json()
+            );
+    }, [props.book.bookQuantity])
 
     return (
         <Product>
