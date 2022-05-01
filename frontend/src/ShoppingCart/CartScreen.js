@@ -126,6 +126,7 @@ const CartScreen = () => {
     const [totalPrice, setTotalPrice] = useState(0);
     const {username} = useParams()
     const [copies, setCopies] = useState(0);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
     useEffect(() => {
         fetch(`/${username}/shopping_cart`, {
@@ -148,14 +149,16 @@ const CartScreen = () => {
                         console.log(price);
                         price = Math.round(price*100)/100;
                         setTotalPrice(price);
-                        setCopies(copy);
+                        
                     });
+                    setCopies(copy);
                 }
             })
-    },[books.length]);
+    },[books.length, copies]);
 
+    //totalQuantity={totalQuantity} setTotalQuantity={setTotalQuantity}
 
-    let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copy = {copies}/>);
+    let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copies={copies} setCopies={setCopies}/>);
     return (
         <div>
             <Navigation/>

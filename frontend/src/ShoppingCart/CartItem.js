@@ -59,7 +59,13 @@ const CartItems = (props) => {
     const {username} = useParams();
     const [bookQuantity, setBookQuantity] = useState(props.book.bookQuantity);
 
-    function updateQuantity(quantity) {
+    function updateQuantity(qty) {
+        let quantity = props.book.bookQuantity;
+        if (qty == 1) {
+            quantity++;
+        } else {
+            quantity--;
+        }
         const data = {
             bookTitle: props.book.bookTitle,
             bookQuantity: quantity,
@@ -78,8 +84,9 @@ const CartItems = (props) => {
                     });
                 } else {
                     setBookQuantity(data.bookQuantity);
-                    props.book.bookQuantity = data.bookQuantity;
-                    window.location.reload(false);
+                    let copies = props.copies;
+                    props.setCopies(copies + data.bookQuantity);
+                    //window.location.reload(false);
                 }
             })
             .catch((err) => {
@@ -98,11 +105,11 @@ const CartItems = (props) => {
             </ProductDetail>
             <PriceDetail>
                 <ProductAmountContainer>
-                    <Add onClick={() => updateQuantity(props.book.bookQuantity + 1)}/>
+                    <Add onClick={() => updateQuantity(1)}/>
                     <ProductAmount>
                         {bookQuantity}
                     </ProductAmount>
-                    <Remove onClick={() => updateQuantity(props.book.bookQuantity - 1)}/>
+                    <Remove onClick={() => updateQuantity(-1)}/>
                 </ProductAmountContainer>
                 <ProductPrice>$ {props.book.price}</ProductPrice>
             </PriceDetail>
