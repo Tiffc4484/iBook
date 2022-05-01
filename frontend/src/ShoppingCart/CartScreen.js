@@ -156,8 +156,6 @@ const CartScreen = () => {
             })
     },[books.length, copies]);
 
-    //totalQuantity={totalQuantity} setTotalQuantity={setTotalQuantity}
-
     let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copies={copies} setCopies={setCopies}/>);
     return (
         <div>

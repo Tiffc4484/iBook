@@ -86,7 +86,6 @@ const CartItems = (props) => {
                     setBookQuantity(data.bookQuantity);
                     let copies = props.copies;
                     props.setCopies(copies + data.bookQuantity);
-                    //window.location.reload(false);
                 }
             })
             .catch((err) => {
