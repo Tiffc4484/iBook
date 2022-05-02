@@ -18,7 +18,7 @@ const HomeScreen = () => {
     useEffect(() => {
         fetchTopBooks();
         fetchRecentBooks();
-    });
+    }, []);
 
     // TODO: update this to recommended books for current user
     const discoverBooks = dummyBooks.data.books;
