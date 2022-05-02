@@ -1,4 +1,3 @@
-const cartServices = require("../services/cart-services")
 const express = require("express");
 const router = express.Router();
 const cartModel = require('../models/shopping_cart/shoppingCart-model');
@@ -60,7 +59,6 @@ router.put('/:username/shopping_cart', async (req, res) => {
             status: false,
         });
     }
-
 })
 
 module.exports = router;

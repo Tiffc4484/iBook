@@ -3,7 +3,6 @@ import Rating from "./Rating";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 import item from "./dummyBook.json";
-import cartService from "../ShoppingCart/service/frontend-cart-services";
 import $ from "jquery";
 import Link from "@material-ui/core/Link";
 
@@ -31,16 +30,10 @@ const DetailsItem = (props) => {
     useEffect(() => {
         getUser().then((data) => {
             setUser(data.username);
-            console.log(`re-render user in DetailItem: ${data.username}`);
-            //let name = data.username.slice(0, data.username.lastIndexOf("@"));
-            console.log("current user: " + user);
         })
     },[user]);
 
     toast.configure();
-    // useEffect(() => {
-    //     $("#description").html(description);
-    // }, []);
     
     async function getUser() {
         const resRaw2 = await fetch("/auth/user");
@@ -62,9 +55,6 @@ const DetailsItem = (props) => {
         evt.preventDefault();
         setBook();
         let username = user.slice(0, user.lastIndexOf("@"));
-        console.log("username: " + username);
-        console.log("current book: " + JSON.stringify(currentBook));
-        //cartService.addBookToCart(username, currentBook);
         fetch(`/${username}/shopping_cart`, {
             method: 'POST',
             headers: {

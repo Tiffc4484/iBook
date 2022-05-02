@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import cartService from "../ShoppingCart/service/frontend-cart-services";
 import {Add, Delete, Remove} from "@material-ui/icons";
 import React, {useEffect, useState} from "react";
 import userEvent from "@testing-library/user-event";

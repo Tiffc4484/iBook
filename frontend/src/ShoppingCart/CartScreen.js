@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import Navigation from "../Navigation";
-import cartService from "../ShoppingCart/service/frontend-cart-services";
 import styled from "styled-components";
 import {Add, Remove,} from "@material-ui/icons";
 import items from "../DummyData/dummyBooks.json";
@@ -149,7 +148,6 @@ const CartScreen = () => {
                         console.log(price);
                         price = Math.round(price*100)/100;
                         setTotalPrice(price);
-                        
                     });
                     setCopies(copy);
                 }
@@ -175,20 +173,6 @@ const CartScreen = () => {
                 <Bottom>
                     <Info>
                         <ul>{cartItems}</ul>
-                            {/*    <Image src={items[0].volumeInfo.imageLinks.small}></Image>*/}
-                            {/*    <Details>*/}
-                            {/*        <ProductName><b>Name: </b>The Google Story</ProductName>*/}
-                            {/*        <ProductName><b>Author: </b>{items[0].volumeInfo.authors}</ProductName>*/}
-
-                            {/*    </Details>*/}
-                            {/*<PriceDetail>*/}
-                            {/*    <ProductAmountContainer>*/}
-                            {/*        <Add/>*/}
-                            {/*        <ProductAmount>2</ProductAmount>*/}
-                            {/*        <Remove/>*/}
-                            {/*    </ProductAmountContainer>*/}
-                            {/*    <ProductPrice>$ {items[0].saleInfo.listPrice.amount}</ProductPrice>*/}
-                            {/*</PriceDetail>*/}
                     </Info>
                     <Summary>
                         <SummaryTitle>ORDER SUMMARY</SummaryTitle>
