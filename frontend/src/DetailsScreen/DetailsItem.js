@@ -28,10 +28,11 @@ const DetailsItem = (props) => {
     })
     const [user, setUser] = useState("");
     useEffect(() => {
+        $("#description").html(description);
         getUser().then((data) => {
             setUser(data.username);
         })
-    },[user]);
+    },[user, props.book]);
 
     toast.configure();
     
