@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const MongoDBStore = require("connect-mongodb-session")(session);
-const mongo = require("./server_node/src/mongo");
 const cors = require('cors');
 require("dotenv").config();
 const app = express();
