@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 const indexRouter = require('./server_node/routes/index');
 const usersRouter = require('./server_node/routes/users');
 const authRouter = require('./server_node/routes/authentication');
+const cartRouter = require('./server_node/controller/cart-controller');
 
 const mongoose = require('mongoose');
 const url = process.env.MONGO_URL;
@@ -65,7 +66,10 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
-require('./server_node/controller/cart-controller')(app)
+app.use('/', cartRouter);
+
+
+//require('./server_node/controller/cart-controller')(app)
 
 app.use(express.static(path.join(__dirname, 'frontend')));
 

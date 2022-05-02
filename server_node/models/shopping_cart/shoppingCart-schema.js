@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
+const bookSchema = require('./book-Schema')
 
 const shoppingCartSchema = mongoose.Schema({
-    bookTitle: String,
-    author: String,
-    imageURL: String,
-    bookQuantity: Number,
-    price: Number
-}, {collection: 'cart'})
+    username: String,
+    cart: [bookSchema]
+}, {collection: 'cart'});
 
 module.exports = shoppingCartSchema

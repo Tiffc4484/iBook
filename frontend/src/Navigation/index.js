@@ -58,8 +58,6 @@ export default function Navigation (props) {
                         <Link to="/browse">
                             <i className="fa fa-search fa-2x ms-4 d-block d-lg-none"></i>
                         </Link>
-
-
                         {user && <Link to={`/${username}/shopping_cart`}>
                             <span className="ms-4 d-none d-lg-block"><i className="fa fa-shopping-cart"></i> My Cart</span>
                             <i className="fa fa-shopping-cart fa-2x ms-4 d-block d-lg-none"></i>
@@ -67,8 +65,8 @@ export default function Navigation (props) {
                         {!user? (
                             <Link to="/auth/login">
                                 <button
-                                className="ms-4 btn btn-primary ib-nav-button" >
-                                Login or Create Account
+                                    className="ms-4 btn btn-primary ib-nav-button" >
+                                    Login or Create Account
                                 </button>
                             </Link>
                         ) : (
@@ -99,7 +97,7 @@ async function getUser() {
     if (resRaw2.status !== 204) {
         //console.log("resRaw status: " + resRaw2.status);
         return resRaw2.json();
-    } 
+    }
 }
 
 Navigation.propTypes = {

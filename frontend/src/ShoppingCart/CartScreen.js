@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import Navigation from "../Navigation";
-import cartService from "../ShoppingCart/service/frontend-cart-services";
 import styled from "styled-components";
 import {Add, Remove,} from "@material-ui/icons";
 import items from "../DummyData/dummyBooks.json";
@@ -126,32 +125,36 @@ const CartScreen = () => {
     const [totalPrice, setTotalPrice] = useState(0);
     const {username} = useParams()
     const [copies, setCopies] = useState(0);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
     useEffect(() => {
-         let booksInCart = cartService.findAllBooksInCart(username)
-            .then(response => {
-                setBooks(response)
-                calculateTotalPrice(response)
+        fetch(`/${username}/shopping_cart`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+                return response.json();
             })
-        console.log("use effect in screen" + totalPrice);
-    }, [books.length])
-
-
-    const calculateTotalPrice = (booksInCart) => {
-        let price = 0;
-        let copy = 0;
-        {
-            booksInCart && booksInCart.map((b) => {
-                price += (b.price * b.bookQuantity)
-                copy += b.bookQuantity
-                console.log(price)
-                price = Math.round(price*100)/100
-                setTotalPrice(price)
-                setCopies(copy)
+            .then((res) => {
+                setBooks(res.data[0].cart);
+                let price = 0;
+                let copy = 0;
+                if (books.length > 0) {
+                    books.map((b) => {
+                        price += (b.price * b.bookQuantity);
+                        copy += b.bookQuantity;
+                        console.log(price);
+                        price = Math.round(price*100)/100;
+                        setTotalPrice(price);
+                    });
+                    setCopies(copy);
+                }
             })
-        }
-    }
+    },[books.length, copies]);
 
+    let cartItems = books.length > 0 && books.map(book => <CartItems username={username} book={book} copies={copies} setCopies={setCopies}/>);
     return (
         <div>
             <Navigation/>
@@ -169,25 +172,7 @@ const CartScreen = () => {
 
                 <Bottom>
                     <Info>
-                            {
-                                books && books.map((book) =>
-                                        <CartItems username={username} book={book} copy = {copies}/>
-                                )}
-
-                            {/*    <Image src={items[0].volumeInfo.imageLinks.small}></Image>*/}
-                            {/*    <Details>*/}
-                            {/*        <ProductName><b>Name: </b>The Google Story</ProductName>*/}
-                            {/*        <ProductName><b>Author: </b>{items[0].volumeInfo.authors}</ProductName>*/}
-
-                            {/*    </Details>*/}
-                            {/*<PriceDetail>*/}
-                            {/*    <ProductAmountContainer>*/}
-                            {/*        <Add/>*/}
-                            {/*        <ProductAmount>2</ProductAmount>*/}
-                            {/*        <Remove/>*/}
-                            {/*    </ProductAmountContainer>*/}
-                            {/*    <ProductPrice>$ {items[0].saleInfo.listPrice.amount}</ProductPrice>*/}
-                            {/*</PriceDetail>*/}
+                        <ul>{cartItems}</ul>
                     </Info>
                     <Summary>
                         <SummaryTitle>ORDER SUMMARY</SummaryTitle>

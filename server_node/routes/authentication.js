@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const router = express.Router();
 const userModel = require("../models/users/users-schema");
+const cartModel = require('../models/shopping_cart/shoppingCart-model')
 const bcrypt = require("bcrypt");
 
 router.post("/login", async (req, res) => {
@@ -14,7 +15,6 @@ router.post("/login", async (req, res) => {
         console.log("login find user: " + user);
         if (!user) {
             req.session.error = "Invalid Credentials";
-
             return res.status(400).send("This account does not exist");;
         }
         const match = await bcrypt.compare(password, user.password);
@@ -23,8 +23,6 @@ router.post("/login", async (req, res) => {
         }
         req.session.isAuth = true;
         req.session.username = user.username;
-        //console.log("req.session.isAuth? " + req.session.isAuth);
-        //console.log("req.session.username? " + req.session.username);
         res.redirect("/");
     } catch (err) {
         console.log(err);
@@ -45,7 +43,6 @@ router.post("/signup", async (req, res) => {
     }
     try {
         let user = await userModel.findOne({username});
-        console.log("sign up find user: " + user);
         if (user) {
             return res.status(400).send("This username has been registered");
         }
@@ -54,7 +51,13 @@ router.post("/signup", async (req, res) => {
             username,
             password: hash,
         });
+        let cartUser = username.slice(0, username.lastIndexOf("@"));
+        cart = new cartModel({
+            username: cartUser,
+            cart:[],
+        });
         await user.save();
+        await cart.save();
         return res.status(200).send("Sign up succeed!");
     } catch (err) {
         console.log(err);
@@ -64,7 +67,6 @@ router.post("/signup", async (req, res) => {
 
 router.get("/user", async (req, res) => {
     if (req.session.isAuth) {
-        //console.log("get /auth/user: " + req.session.username);
         res.send(req.session);
     } else {
         res.status(400);

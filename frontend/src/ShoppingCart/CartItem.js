@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import cartService from "../ShoppingCart/service/frontend-cart-services";
 import {Add, Delete, Remove} from "@material-ui/icons";
 import React, {useEffect, useState} from "react";
 import userEvent from "@testing-library/user-event";
+import {useParams} from "react-router";
 
 const Image = styled.img`
     width: 200px;
@@ -55,7 +55,42 @@ const ProductPrice = styled.div`
 
 const CartItems = (props) => {
     const title = props.book.bookTitle ? props.book.bookTitle : "No Title";
-    useEffect(() => {}, [props.book.bookQuantity])
+    const {username} = useParams();
+    const [bookQuantity, setBookQuantity] = useState(props.book.bookQuantity);
+
+    function updateQuantity(qty) {
+        let quantity = props.book.bookQuantity;
+        if (qty == 1) {
+            quantity++;
+        } else {
+            quantity--;
+        }
+        const data = {
+            bookTitle: props.book.bookTitle,
+            bookQuantity: quantity,
+        };
+        fetch(`/${props.username}/shopping_cart`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data),
+        })
+            .then((resRaw) => {
+                if (!resRaw.ok) {
+                    resRaw.text().then((res) => {
+                        alert(res);
+                    });
+                } else {
+                    setBookQuantity(data.bookQuantity);
+                    let copies = props.copies;
+                    props.setCopies(copies + data.bookQuantity);
+                }
+            })
+            .catch((err) => {
+                alert(err);
+            });
+    }
 
     return (
         <Product>
@@ -64,24 +99,15 @@ const CartItems = (props) => {
                 <Details>
                     <ProductName><b>{title}</b></ProductName>
                     <ProductName><b>Author: </b>{props.book.author}</ProductName>
-
                 </Details>
             </ProductDetail>
             <PriceDetail>
                 <ProductAmountContainer>
-                    <Add onClick={() => {
-                        console.log("item page" + props.username)
-                        props.book.bookQuantity += 1;
-                        cartService.updateBookQuantity(props.username, props.book).then(r => r.json)
-                    }}/>
+                    <Add onClick={() => updateQuantity(1)}/>
                     <ProductAmount>
-                        {props.book.bookQuantity}
+                        {bookQuantity}
                     </ProductAmount>
-                    <Remove onClick={() => {
-                        console.log("item page" + props.username)
-                        props.book.bookQuantity -= 1;
-                        cartService.updateBookQuantity(props.username, props.book).then(r => r.json)
-                    }}/>
+                    <Remove onClick={() => updateQuantity(-1)}/>
                 </ProductAmountContainer>
                 <ProductPrice>$ {props.book.price}</ProductPrice>
             </PriceDetail>
@@ -89,8 +115,4 @@ const CartItems = (props) => {
     )
 }
 
-function add(book) {
-    book.bookQuantity++;
-}
-
-export  default CartItems;
+export default CartItems;
